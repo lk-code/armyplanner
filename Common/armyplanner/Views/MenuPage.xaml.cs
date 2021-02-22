@@ -1,24 +1,27 @@
-﻿using armyplanner.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
+using armyplanner.Models.Navigation;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace armyplanner.Views
 {
     public partial class MenuPage : ContentPage
     {
+        /// <summary>
+        /// 
+        /// </summary>
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
-        List<HomeMenuItem> menuItems;
+        /// <summary>
+        /// 
+        /// </summary>
+        List<MenuEntry> menuItems;
+
         public MenuPage()
         {
             InitializeComponent();
 
-            menuItems = new List<HomeMenuItem>
+            menuItems = new List<MenuEntry>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new MenuEntry {Id = MenuItemType.Overview, Title="Overview" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
@@ -29,7 +32,7 @@ namespace armyplanner.Views
                 if (e.SelectedItem == null)
                     return;
 
-                var id = (int)((HomeMenuItem)e.SelectedItem).Id;
+                var id = (int)((MenuEntry)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
         }

@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using armyplanner.Models;
+using armyplanner.Models.Navigation;
 
 namespace armyplanner.Views
 {
@@ -21,7 +22,7 @@ namespace armyplanner.Views
 
             FlyoutLayoutBehavior = FlyoutLayoutBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Overview, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -30,11 +31,8 @@ namespace armyplanner.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                    case (int)MenuItemType.Overview:
+                        MenuPages.Add(id, new NavigationPage(new OverviewPage()));
                         break;
                 }
             }

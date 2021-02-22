@@ -16,7 +16,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:ItemsPage />
+                <views:OverviewPage />
             </x:Arguments>
         </NavigationPage>
     </FlyoutPage.Detail>

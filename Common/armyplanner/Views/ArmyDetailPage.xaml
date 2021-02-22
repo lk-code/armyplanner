@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:accrod="clr-namespace:Syncfusion.XForms.Accordion;assembly=Syncfusion.Expander.XForms"
+    xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    x:Class="armyplanner.Views.ArmyDetailPage">
+
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <accrod:SfAccordion Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="StartAndExpand" ExpandMode="Single">
+
+                <accrod:SfAccordion.Items>
+
+                    <accrod:AccordionItem>
+                        <accrod:AccordionItem.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="InvoiceDescription.png" Margin="3" Aspect="AspectFit"/>
+                                <Label TextColor="#495F6E" Text="Invoice Description" FontSize="16" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </accrod:AccordionItem.Header>
+                        <accrod:AccordionItem.Content>
+                            <Grid BackgroundColor="#FFFFFF">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <BoxView Color="#D1DBE1"/>
+                                <Grid Padding="15,0,0,10" Grid.Row="1">
+                                    <Label TextColor="#303030" Text="2018 Subaru Outback work order for Alex" FontSize="16" VerticalOptions="CenterAndExpand"/>
+                                </Grid>
+                            </Grid>
+                        </accrod:AccordionItem.Content>
+                    </accrod:AccordionItem>
+
+                    <accrod:AccordionItem>
+                        <accrod:AccordionItem.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="InvoiceCalendar.png" Margin="3" Aspect="AspectFit"/>
+                                <Label TextColor="#495F6E" Text="Invoice Date" FontSize="16" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </accrod:AccordionItem.Header>
+                        <accrod:AccordionItem.Content>
+                            <Grid BackgroundColor="#FFFFFF">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <BoxView Color="#D1DBE1"/>
+                                <Grid Padding="15,0,0,10" Grid.Row="1">
+                                    <Label TextColor="#303030" Text="11.03 AM, 15 January 2019" FontSize="16" VerticalOptions="CenterAndExpand"/>
+                                </Grid>
+                            </Grid>
+                        </accrod:AccordionItem.Content>
+                    </accrod:AccordionItem>
+
+                    <accrod:AccordionItem>
+                        <accrod:AccordionItem.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="InvoicePaidDetails.png" Margin="3" HeightRequest="30" Aspect="AspectFit"/>
+                                <Label Text="Payment Details" FontSize="16" TextColor="#495F6E" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </accrod:AccordionItem.Header>
+                        <accrod:AccordionItem.Content>
+                            <Grid BackgroundColor="#FFFFFF">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <BoxView Color="#D1DBE1"/>
+                                <Grid Padding="15,0,10,10" Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label TextColor="#303030" FontSize="16" Text="Card Payment"/>
+                                    <Label TextColor="#303030" FontSize="16" Text="Third-Party coupons" Grid.Row="1"/>
+                                    <Label TextColor="#303030" FontSize="16" Text="Total Amount Paid" FontAttributes="Bold" Grid.Row="2"/>
+                                    <Label TextColor="#303030" FontSize="16" HorizontalTextAlignment="End" Text="$31,200.00" Grid.Column="1"/>
+                                    <Label TextColor="#303030" FontSize="16" HorizontalTextAlignment="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
+                                    <Label TextColor="#303030" FontSize="16" HorizontalTextAlignment="End" Text="$36,200.00" FontAttributes="Bold" Grid.Row="2" Grid.Column="1"/>
+                                </Grid>
+                            </Grid>
+                        </accrod:AccordionItem.Content>
+                    </accrod:AccordionItem>
+
+                    <accrod:AccordionItem>
+                        <accrod:AccordionItem.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="InvoiceLocation.png" Margin="3" HeightRequest="30" Aspect="AspectFit"/>
+                                <Label TextColor="#495F6E" FontSize="16" Text="Address" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </accrod:AccordionItem.Header>
+                        <accrod:AccordionItem.Content>
+                            <Grid BackgroundColor="#FFFFFF">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <BoxView Color="#D1DBE1"/>
+                                <Grid Padding="15,0,10,10" Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Label TextColor="#303030" FontSize="16" Text="Alex" FontAttributes="Bold"/>
+                                    <Label TextColor="#303030" FontSize="16" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
+                                    <Label TextColor="#303030" FontSize="16" Text="(202) 547-3555" Grid.Row="2"/>
+                                </Grid>
+                            </Grid>
+                        </accrod:AccordionItem.Content>
+                    </accrod:AccordionItem>
+
+                    <accrod:AccordionItem>
+                        <accrod:AccordionItem.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="InvoiceDisclaimer.png" Margin="3" HeightRequest="30" Aspect="AspectFit"/>
+                                <Label TextColor="#495F6E" FontSize="16" Text="Disclaimer" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </accrod:AccordionItem.Header>
+                        <accrod:AccordionItem.Content>
+                            <Grid BackgroundColor="#FFFFFF">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1"/>
+                                    <RowDefinition Height="90"/>
+                                </Grid.RowDefinitions>
+                                <BoxView Color="#D1DBE1"/>
+                                <Grid Padding="15,0,10,0" Grid.Row="1">
+                                    <Label TextColor="#303030" FontSize="16" Text="The charge mentioned above represents the cost of the motor vechile repair and supplies purchased. Not responsible for damage caused by theft, fire, or acts of nature." />
+                                </Grid>
+                            </Grid>
+                        </accrod:AccordionItem.Content>
+                    </accrod:AccordionItem>
+
+                </accrod:SfAccordion.Items>
+
+            </accrod:SfAccordion>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

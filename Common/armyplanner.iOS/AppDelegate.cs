@@ -5,6 +5,9 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
+using Syncfusion.XForms.iOS.Accordion;
+using Syncfusion.ListView.XForms.iOS;
+
 namespace armyplanner.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -23,6 +26,9 @@ namespace armyplanner.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            SfAccordionRenderer.Init();
+            SfListViewRenderer.Init();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
