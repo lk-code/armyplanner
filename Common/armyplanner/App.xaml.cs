@@ -29,7 +29,7 @@ namespace armyplanner
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDAyMzg1QDMxMzgyZTM0MmUzMFJyTjNzRnFQL3RnaGwwR3lzalU1T1Y0V2kwcVcyNUp0cjVkUk1IZzlabTQ9");
 
             InitializeComponent();
-
+            
             VersionTracking.Track();
 
             this.LoadConfig();
