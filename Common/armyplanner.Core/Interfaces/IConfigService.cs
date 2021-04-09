@@ -1,10 +1,10 @@
-﻿using System.Reflection;
+﻿using Newtonsoft.Json.Linq;
 
 namespace armyplanner.Core.Interfaces
 {
     public interface IConfigService
     {
-        void Initialize(string appNamespace, string settingsFile, Assembly assembly);
+        void Initialize(JObject configObject);
         string Get(string name);
         T Get<T>(string name);
     }

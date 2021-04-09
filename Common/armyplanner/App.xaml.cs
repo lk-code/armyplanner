@@ -1,26 +1,40 @@
-﻿using System.Reflection;
-using armyplanner.Core.Interfaces;
-using armyplanner.Core.Services.AppCenter;
-using armyplanner.Core.Services.Config;
-using armyplanner.Core.Services.Logging;
-using armyplanner.Views;
+﻿using armyplanner.Core.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Linq;
+using System;
+using System.IO;
+using System.Reflection;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace armyplanner
 {
     public partial class App : Application
     {
+        #region # properties #
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IServiceProvider ServiceProvider { get; set; }
+
+        #endregion
+
         #region # constructors #
 
-        public App()
+        public App(IServiceProvider serviceProvider)
         {
+            App.ServiceProvider = serviceProvider;
+
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDAyMzg1QDMxMzgyZTM0MmUzMFJyTjNzRnFQL3RnaGwwR3lzalU1T1Y0V2kwcVcyNUp0cjVkUk1IZzlabTQ9");
 
             InitializeComponent();
 
-            this.LoadDependencyInjection();
+            VersionTracking.Track();
 
-            MainPage = new MainPage();
+            this.LoadConfig();
+
+            MainPage = new Views.MainPage();
         }
 
         #endregion
@@ -46,18 +60,26 @@ namespace armyplanner
         /// <summary>
         /// 
         /// </summary>
-        private void LoadDependencyInjection()
+        /// <returns></returns>
+        private void LoadConfig()
         {
-            // ConfigService
-            DependencyService.Register<IConfigService, ConfigService>();
-            DependencyService.Get<IConfigService>().Initialize(typeof(App).Namespace, "appsettings.json", IntrospectionExtensions.GetTypeInfo(typeof(App)).Assembly);
+            string appNamespace = typeof(App).Namespace;
+            string settingsFile = "appsettings.json";
+            Assembly assembly = IntrospectionExtensions.GetTypeInfo(typeof(App)).Assembly;
+            string resourceFileName = $"{appNamespace}.{settingsFile}";
 
-            // AppCenterService
-            DependencyService.Register<IAppCenterService, AppCenterService>();
-            (DependencyService.Get<IAppCenterService>() as IInitialized).Initialize();
+            Stream stream = assembly.GetManifestResourceStream(resourceFileName);
 
-            // LoggingService
-            DependencyService.Register<ILoggingService, LoggingService>();
+            JObject jObject = null;
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                string json = reader.ReadToEnd();
+
+                jObject = JObject.Parse(json);
+            }
+
+            var d = App.ServiceProvider.GetService<IConfigService>();
+            d.Initialize(jObject);
         }
 
         #endregion

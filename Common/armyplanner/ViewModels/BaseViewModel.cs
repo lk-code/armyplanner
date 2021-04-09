@@ -1,12 +1,12 @@
-﻿using System;
+﻿using armyplanner.Core.Mvvm;
+using armyplanner.EventArgs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using armyplanner.Core.EventArgs;
-using armyplanner.Core.Mvvm;
 using Xamarin.Forms;
 
 namespace armyplanner.ViewModels

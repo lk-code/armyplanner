@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
-using UIKit;
-
-using Syncfusion.XForms.iOS.Accordion;
+﻿using Foundation;
 using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.XForms.iOS.Accordion;
+using UIKit;
 
 namespace armyplanner.iOS
 {
@@ -29,7 +24,10 @@ namespace armyplanner.iOS
             SfAccordionRenderer.Init();
             SfListViewRenderer.Init();
 
-            LoadApplication(new App());
+            Startup.Init();
+
+            App xamarinApp = new App(Startup.ServiceProvider);
+            LoadApplication(xamarinApp);
 
             return base.FinishedLaunching(app, options);
         }

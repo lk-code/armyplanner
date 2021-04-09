@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using armyplanner.Core.EventArgs;
+using armyplanner.EventArgs;
 using armyplanner.Core.Interfaces;
 using armyplanner.Core.Models;
 using armyplanner.Core.Mvvm;

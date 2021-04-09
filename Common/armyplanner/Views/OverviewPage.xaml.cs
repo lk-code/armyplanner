@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using armyplanner.Core.EventArgs;
+﻿using armyplanner.EventArgs;
 using armyplanner.ViewModels;
 using Xamarin.Forms;
 

@@ -9,7 +9,7 @@ namespace armyplanner.Services.Logging
 {
     public class LoggingService : ILoggingService
     {
-        #region # private properties #
+        #region # properties #
 
         /// <summary>
         /// 
