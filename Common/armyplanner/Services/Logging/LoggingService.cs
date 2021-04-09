@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using armyplanner.Core.Interfaces;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 
-namespace armyplanner.Core.Services.AppCenter
+namespace armyplanner.Services.Logging
 {
-    public class AppCenterService : IInitialized, Interfaces.IAppCenterService
+    public class LoggingService : ILoggingService
     {
         #region # private properties #
 
@@ -24,7 +23,7 @@ namespace armyplanner.Core.Services.AppCenter
         /// <summary>
         /// 
         /// </summary>
-        public AppCenterService()
+        public LoggingService()
         {
 
         }
@@ -32,7 +31,7 @@ namespace armyplanner.Core.Services.AppCenter
         /// <summary>
         /// 
         /// </summary>
-        ~AppCenterService()
+        ~LoggingService()
         {
 
         }
@@ -44,9 +43,43 @@ namespace armyplanner.Core.Services.AppCenter
         /// <summary>
         /// 
         /// </summary>
-        public async void Initialize()
+        public void Initialize()
         {
-            await this.InitializeAppCenterAsync();
+            this.InitializeAppCenter();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="className"></param>
+        /// <param name="method"></param>
+        /// <param name="message"></param>
+        public void LogMessage(string className, string method, string message)
+        {
+            Analytics.TrackEvent($"{className}::{method}() - {message}");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="exception"></param>
+        /// <param name="message"></param>
+        /// <param name="properties"></param>
+        /// <param name="attachments"></param>
+        public void LogException(Exception exception, string message = null, IDictionary<string, string> properties = null, params object[] attachments)
+        {
+            if (!string.IsNullOrEmpty(message)
+                && !string.IsNullOrWhiteSpace(message))
+            {
+                if (properties == null)
+                {
+                    properties = new Dictionary<string, string>();
+                }
+
+                properties.Add("development_message", message);
+            }
+
+            Crashes.TrackError(exception, properties, (attachments as ErrorAttachmentLog[]));
         }
 
         /// <summary>
@@ -59,17 +92,6 @@ namespace armyplanner.Core.Services.AppCenter
             Analytics.TrackEvent(name, properties);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="exception"></param>
-        /// <param name="properties"></param>
-        /// <param name="attachments"></param>
-        public void TrackError(Exception exception, IDictionary<string, string> properties = null, params ErrorAttachmentLog[] attachments)
-        {
-            Crashes.TrackError(exception, properties, attachments);
-        }
-
         #endregion
 
         #region # private logic #
@@ -78,15 +100,13 @@ namespace armyplanner.Core.Services.AppCenter
         /// 
         /// </summary>
         /// <returns></returns>
-        private async Task InitializeAppCenterAsync()
+        private void InitializeAppCenter()
         {
             string appCenterId = this.GetAppCenterId();
 
             Microsoft.AppCenter.AppCenter.Start(appCenterId,
                 typeof(Analytics),
                 typeof(Crashes));
-
-            await Task.CompletedTask;
         }
 
         /// <summary>

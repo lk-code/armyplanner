@@ -1,7 +1,6 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
-namespace armyplanner.Core.EventArgs
+namespace armyplanner.EventArgs
 {
     public class InitEventArgs : System.EventArgs
     {
