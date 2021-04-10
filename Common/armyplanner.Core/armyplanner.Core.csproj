@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Models\StorageService\" />
     <Folder Include="Services\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Models\" />
     <Folder Include="Mvvm\" />
     <Folder Include="Services\Config\" />
     <Folder Include="EventArgs\" />
