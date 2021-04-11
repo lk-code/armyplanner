@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using armyplanner.Core.Interfaces;
+﻿using armyplanner.Core.Interfaces;
+using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using Xamarin.Forms;
+using System;
+using System.Collections.Generic;
 
 namespace armyplanner.Services.Logging
 {
@@ -11,10 +11,7 @@ namespace armyplanner.Services.Logging
     {
         #region # properties #
 
-        /// <summary>
-        /// 
-        /// </summary>
-        private IConfigService _configService => DependencyService.Get<IConfigService>();
+        private readonly IConfigService _configService;
 
         #endregion
 
@@ -23,9 +20,12 @@ namespace armyplanner.Services.Logging
         /// <summary>
         /// 
         /// </summary>
-        public LoggingService()
+        public LoggingService(
+            IConfigService configService)
         {
+            this._configService = configService ?? throw new ArgumentNullException(nameof(configService));
 
+            this.Initialize();
         }
 
         /// <summary>
@@ -51,6 +51,15 @@ namespace armyplanner.Services.Logging
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="userId"></param>
+        public void SetLogUser(string userId)
+        {
+            AppCenter.SetUserId(userId);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="className"></param>
         /// <param name="method"></param>
         /// <param name="message"></param>
@@ -62,11 +71,20 @@ namespace armyplanner.Services.Logging
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="exception"></param>
+        /// <param name="ex"></param>
+        public void LogException(Exception ex)
+        {
+            this.LogException(ex, null);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ex"></param>
         /// <param name="message"></param>
         /// <param name="properties"></param>
         /// <param name="attachments"></param>
-        public void LogException(Exception exception, string message = null, IDictionary<string, string> properties = null, params object[] attachments)
+        public void LogException(Exception ex, string message = null, IDictionary<string, string> properties = null, params object[] attachments)
         {
             if (!string.IsNullOrEmpty(message)
                 && !string.IsNullOrWhiteSpace(message))
@@ -79,7 +97,18 @@ namespace armyplanner.Services.Logging
                 properties.Add("development_message", message);
             }
 
-            Crashes.TrackError(exception, properties, (attachments as ErrorAttachmentLog[]));
+            this.LogException(ex, properties, attachments);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ex"></param>
+        /// <param name="properties"></param>
+        /// <param name="attachments"></param>
+        public void LogException(Exception ex, IDictionary<string, string> properties = null, params object[] attachments)
+        {
+            Crashes.TrackError(ex, properties, (attachments as ErrorAttachmentLog[]));
         }
 
         /// <summary>
@@ -104,7 +133,7 @@ namespace armyplanner.Services.Logging
         {
             string appCenterId = this.GetAppCenterId();
 
-            Microsoft.AppCenter.AppCenter.Start(appCenterId,
+            AppCenter.Start(appCenterId,
                 typeof(Analytics),
                 typeof(Crashes));
         }

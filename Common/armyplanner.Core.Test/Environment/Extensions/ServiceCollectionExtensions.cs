@@ -1,26 +1,23 @@
 ﻿using armyplanner.Core.Interfaces;
 using armyplanner.Core.Services.Config;
 using armyplanner.Core.Services.Storage;
-using armyplanner.Services.Logging;
-using armyplanner.Services.Network;
+using armyplanner.Core.Test.Environment.Services.Logging;
+using armyplanner.Core.Test.Environment.Services.Network;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace armyplanner.Extensions
+namespace armyplanner.Core.Test.Environment.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddApp(this IServiceCollection services)
+        public static IServiceCollection AddAppCoreTest(this IServiceCollection services)
         {
             // core-services
             services.AddSingleton<IConfigService, ConfigService>();
             services.AddSingleton<IStorageService, StorageService>();
 
-            // platform-services
+            // test-services
             services.AddSingleton<ILoggingService, LoggingService>();
             services.AddSingleton<INetworkService, NetworkService>();
-
-            // viewmodels
-            //services.AddTransient<AppShellViewModel>();
 
             return services;
         }

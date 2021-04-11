@@ -23,7 +23,6 @@
     <ProjectReference Include="..\armyplanner.Core\armyplanner.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="Models\Navigation\" />
     <Folder Include="Services\Logging\" />
     <Folder Include="EventArgs\" />
@@ -34,4 +33,5 @@
   <ItemGroup>
     <EmbeddedResource Include="appsettings.json" />
   </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>
