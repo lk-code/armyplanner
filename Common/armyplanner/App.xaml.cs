@@ -34,7 +34,7 @@ namespace armyplanner
 
             this.LoadConfig();
 
-            MainPage = new Views.MainPage();
+            MainPage = new Views.AppShell();
         }
 
         #endregion

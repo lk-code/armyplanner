@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "armyplanner.UWP", "..\Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "armyplanner.macOS", "..\Common\armyplanner.macOS\armyplanner.macOS.csproj", "{DB485F9C-C9BB-4E6B-BC24-F4E4906283AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "armyplanner.Core.Test", "..\Common\armyplanner.Core.Test\armyplanner.Core.Test.csproj", "{18168197-F07B-475C-8DEA-0E24BC37232C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "armyplanner.Core.Test", "..\Common\armyplanner.Core.Test\armyplanner.Core.Test.csproj", "{18168197-F07B-475C-8DEA-0E24BC37232C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

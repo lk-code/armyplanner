@@ -1,9 +1,11 @@
 ﻿using armyplanner.EventArgs;
-using armyplanner.ViewModels;
+using armyplanner.ViewModels.Planner;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-namespace armyplanner.Views
+namespace armyplanner.Views.Planner
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OverviewPage : ContentPage
     {
         /// <summary>
@@ -15,7 +17,7 @@ namespace armyplanner.Views
         {
             InitializeComponent();
 
-            BindingContext = this.ViewModel = new OverviewViewModel();
+            BindingContext = this.ViewModel = armyplanner.App.ServiceProvider.GetService<OverviewViewModel>();
         }
 
         /// <summary>

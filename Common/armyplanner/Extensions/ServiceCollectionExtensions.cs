@@ -3,6 +3,10 @@ using armyplanner.Core.Services.Config;
 using armyplanner.Core.Services.Storage;
 using armyplanner.Services.Logging;
 using armyplanner.Services.Network;
+using armyplanner.Services.Preferences;
+using armyplanner.ViewModels;
+using armyplanner.ViewModels.App;
+using armyplanner.ViewModels.Planner;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace armyplanner.Extensions
@@ -18,9 +22,12 @@ namespace armyplanner.Extensions
             // platform-services
             services.AddSingleton<ILoggingService, LoggingService>();
             services.AddSingleton<INetworkService, NetworkService>();
+            services.AddSingleton<IPreferencesServices, PreferencesServices>();
 
             // viewmodels
-            //services.AddTransient<AppShellViewModel>();
+            services.AddTransient<AppShellViewModel>();
+            services.AddTransient<SettingsViewModel>();
+            services.AddTransient<OverviewViewModel>();
 
             return services;
         }
