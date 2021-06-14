@@ -1,0 +1,4 @@
+﻿
+namespace ArmyPlanner.Skia.Gtk
+{
+}
