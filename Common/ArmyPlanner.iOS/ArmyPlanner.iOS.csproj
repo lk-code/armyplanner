@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>09073df8-87bf-47f9-8230-98387379bb87</ProjectGuid>
+    <ProjectGuid>{09073DF8-87BF-47F9-8230-98387379BB87}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>ArmyPlanner</RootNamespace>
@@ -151,10 +151,12 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Media" Visible="false" />
-    <Folder Include="Media\AppIcons" Visible="false" />
-    <Folder Include="Media\LaunchImages" Visible="false" />
+    <ProjectReference Include="..\ArmyPlanner.Core\ArmyPlanner.Core.csproj">
+      <Project>{e33e5dae-5b77-4a51-bb8f-1a9888bd3145}</Project>
+      <Name>ArmyPlanner.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\ArmyPlanner.Shared\ArmyPlanner.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

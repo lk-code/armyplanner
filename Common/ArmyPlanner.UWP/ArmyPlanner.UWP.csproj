@@ -19,7 +19,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>ec9faf21-319a-48e4-a147-bf8c405cf7d6</ProjectGuid>
+    <ProjectGuid>{EC9FAF21-319A-48E4-A147-BF8C405CF7D6}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ArmyPlanner</RootNamespace>
@@ -128,6 +128,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\ArmyPlanner.Core\ArmyPlanner.Core.csproj">
+      <Project>{E33E5DAE-5B77-4A51-BB8F-1A9888BD3145}</Project>
+      <Name>ArmyPlanner.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

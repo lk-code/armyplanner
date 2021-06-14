@@ -1,19 +1,10 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using ArmyPlanner.Views;
+using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace ArmyPlanner
@@ -30,6 +21,8 @@ namespace ArmyPlanner
         private Windows.UI.Xaml.Window _window;
 #endif
 
+        public static IServiceProvider ServiceProvider { get; set; }
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -39,6 +32,9 @@ namespace ArmyPlanner
             InitializeLogging();
 
             this.InitializeComponent();
+
+            Startup.Init();
+            App.ServiceProvider = Startup.ServiceProvider;
 
 #if HAS_UNO || NETFX_CORE
             this.Suspending += OnSuspending;
