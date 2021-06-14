@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArmyPlanner.Skia.Gtk", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArmyPlanner.Skia.Tizen", "..\Common\ArmyPlanner.Skia.Tizen\ArmyPlanner.Skia.Tizen.csproj", "{AD2867E8-2286-436B-AAAA-D8D7A188B2A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArmyPlanner.Core", "..\Common\ArmyPlanner.Core\ArmyPlanner.Core.csproj", "{E33E5DAE-5B77-4A51-BB8F-1A9888BD3145}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArmyPlanner.Core", "..\Common\ArmyPlanner.Core\ArmyPlanner.Core.csproj", "{E33E5DAE-5B77-4A51-BB8F-1A9888BD3145}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

@@ -29,6 +29,7 @@ namespace ArmyPlanner.Views
         /// <param name="e"></param>
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
+            this.ViewModel.Initialize(this.MainContentFrame);
             // this.ViewModel.Title = "Hello Lars";
         }
     }

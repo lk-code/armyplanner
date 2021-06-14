@@ -7,6 +7,7 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Uno.Microsoft.Xaml.Behaviors.Uwp.Managed" Version="2.0.3-uno.95" />
     <PackageReference Include="Uno.UI.Skia.Wpf" Version="3.8.6" />
     <PackageReference Include="Uno.UI.RemoteControl" Version="3.8.6" Condition="'$(Configuration)'=='Debug'" />
   </ItemGroup>
