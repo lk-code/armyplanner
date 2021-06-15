@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using ArmyPlanner.Core.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ArmyPlanner.Core.Interfaces
 {
     public interface IDataSetService
     {
-        List<string> GetAvailableEntries();
+        Task<List<Game>> GetAvailableCodiziesAsync();
     }
 }

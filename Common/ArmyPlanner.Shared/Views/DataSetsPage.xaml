@@ -11,16 +11,39 @@
 
     <Page.Resources>
         <DataTemplate x:Key="DataSetItemTemplate" x:DataType="datasetmodels:DataSetEntry">
-            <TreeViewItem
-                AutomationProperties.Name="{x:Bind Name}"
-                IsEnabled="False"
-                IsExpanded="True"
-                IsSelected="{x:Bind IsDownloaded}"
-                ItemsSource="{x:Bind Children}">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="{x:Bind Name}" />
-                </StackPanel>
-            </TreeViewItem>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Ellipse
+                    x:Name="Ellipse"
+                    Grid.RowSpan="2"
+                    Width="32"
+                    Height="32"
+                    Margin="6"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Fill="{ThemeResource SystemControlBackgroundBaseMediumBrush}"
+                    Visibility="Collapsed" />
+                <TextBlock
+                    Grid.Column="1"
+                    Margin="12,6,0,0"
+                    x:Phase="1"
+                    Style="{ThemeResource BaseTextBlockStyle}"
+                    Text="{x:Bind Name}" />
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="12,0,0,6"
+                    x:Phase="2"
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Text="{x:Bind GameTitle}" />
+            </Grid>
         </DataTemplate>
     </Page.Resources>
 
@@ -38,11 +61,10 @@
             <AppBarButton Icon="Refresh" Label="~Refresh" />
         </CommandBar>
 
-        <TreeView
+        <ListView
             Grid.Row="1"
             ItemTemplate="{StaticResource DataSetItemTemplate}"
-            ItemsSource="{x:Bind ViewModel.AvailableDataSets}"
-            SelectionMode="Multiple" />
+            ItemsSource="{x:Bind ViewModel.AvailableDataSets}" />
 
     </Grid>
 

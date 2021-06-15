@@ -6,8 +6,13 @@ namespace ArmyPlanner.Models.DataSet
     public class DataSetEntry : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
         public string Name { get; set; }
+        public string GameTitle { get; set; }
+        /*
         public ExplorerItemType Type { get; set; }
+        /* */
+        /*
         private ObservableCollection<DataSetEntry> _children;
         public ObservableCollection<DataSetEntry> Children
         {
@@ -24,7 +29,9 @@ namespace ArmyPlanner.Models.DataSet
                 _children = value;
             }
         }
+        /* */
 
+        /*
         private bool _isExpanded;
         public bool IsExpanded
         {
@@ -38,12 +45,12 @@ namespace ArmyPlanner.Models.DataSet
                 }
             }
         }
+        /* */
 
         private bool _isDownloaded;
         public bool IsDownloaded
         {
             get { return _isDownloaded; }
-
             set
             {
                 if (_isDownloaded != value)
@@ -52,7 +59,12 @@ namespace ArmyPlanner.Models.DataSet
                     NotifyPropertyChanged("IsDownloaded");
                 }
             }
+        }
 
+        public DataSetEntry(string name, string gameTitle)
+        {
+            this.Name = name;
+            this.GameTitle = gameTitle;
         }
 
         private void NotifyPropertyChanged(string propertyName)
