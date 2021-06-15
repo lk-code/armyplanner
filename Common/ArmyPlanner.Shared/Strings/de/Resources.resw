@@ -124,7 +124,7 @@
     <value>ArmyPlanner</value>
   </data>
   <data name="MainNavigation_DataLists.Title" xml:space="preserve">
-    <value>DataLists</value>
+    <value>Datensätze</value>
   </data>
   <data name="MainNavigation_DataLists.Tooltip" xml:space="preserve">
     <value>Übersicht aller verfügbaren Datensätze</value>

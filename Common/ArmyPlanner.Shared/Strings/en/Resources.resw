@@ -123,10 +123,10 @@
   <data name="AppTitleBarTitle.Text" xml:space="preserve">
     <value>ArmyPlanner</value>
   </data>
-  <data name="MainNavigation_DataLists.Title" xml:space="preserve">
-    <value>DataLists</value>
+  <data name="MainNavigation_DataSets.Title" xml:space="preserve">
+    <value>DataSets</value>
   </data>
-  <data name="MainNavigation_DataLists.Tooltip" xml:space="preserve">
+  <data name="MainNavigation_DataSets.Tooltip" xml:space="preserve">
     <value>Overview of all available records</value>
   </data>
   <data name="MainNavigation_Overview.Title" xml:space="preserve">

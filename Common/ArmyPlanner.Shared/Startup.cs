@@ -1,4 +1,5 @@
 ﻿using ArmyPlanner.Core.Interfaces;
+using ArmyPlanner.Core.Services.DataSet;
 using ArmyPlanner.Services.Logging;
 using ArmyPlanner.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,15 +15,14 @@ namespace ArmyPlanner
         {
             ServiceProvider serviceProvider = new ServiceCollection()
 
-            // core-services
-            // .AddSingleton<IConfigService, ConfigService>()
-
-            // platform-services
+            // services
             .AddSingleton<ILoggingService, LoggingService>()
+            .AddSingleton<IDataSetService, DataSetService>()
 
             // viewmodels
             .AddTransient<MainViewModel>()
             .AddTransient<SettingsViewModel>()
+            .AddTransient<DataSetsViewModel>()
 
             .BuildServiceProvider();
 

@@ -19,15 +19,18 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ResourceExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DataSet\DataSetEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DataSet\ExplorerItemType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Navigation\NavigationItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mvvm\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Logging\LoggingService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Startup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DataSetsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DataListsPage.xaml.cs">
-      <DependentUpon>DataListsPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DataSetsPage.xaml.cs">
+      <DependentUpon>DataSetsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -44,7 +47,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Views\DataListsPage.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)Views\DataSetsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

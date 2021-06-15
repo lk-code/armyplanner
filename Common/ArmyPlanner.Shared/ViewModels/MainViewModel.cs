@@ -73,10 +73,10 @@ namespace ArmyPlanner.ViewModels
                 },
                 new NavigationItem
                 {
-                    Title = "MainNavigation_DataLists\\Title".GetLocalized(),
+                    Title = "MainNavigation_DataSets\\Title".GetLocalized(),
                     Glyph = Symbol.List,
-                    ToolTip = "MainNavigation_DataLists\\Tooltip".GetLocalized(),
-                    Target = typeof(DataListsPage)
+                    ToolTip = "MainNavigation_DataSets\\Tooltip".GetLocalized(),
+                    Target = typeof(DataSetsPage)
                 }
             };
         }
