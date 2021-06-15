@@ -5,7 +5,17 @@
     xmlns:local="using:ArmyPlanner">
 
     <Application.Resources>
-        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <!--  Microsoft UI Controls  -->
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+
+                <!--  Variables  -->
+                <ResourceDictionary Source="/Styles/BreakPoints.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
     </Application.Resources>
 
 </Application>

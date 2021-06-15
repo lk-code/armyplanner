@@ -63,7 +63,21 @@ namespace ArmyPlanner.ViewModels
 
         private void HandleNavigationInvoked(NavigationViewItemInvokedEventArgs eventArgs)
         {
+            bool isSettingsInvoked = eventArgs.IsSettingsInvoked;
+            if(isSettingsInvoked)
+            {
+                this._contentFrame.Navigate(typeof(SettingsPage));
+
+                return;
+            }
+
             NavigationItem navigationItem = (eventArgs.InvokedItemContainer.DataContext as NavigationItem);
+
+            if(navigationItem == null)
+            {
+                return;
+            }
+
             this._contentFrame.Navigate(navigationItem.Target);
         }
 

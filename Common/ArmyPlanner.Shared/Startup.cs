@@ -22,6 +22,7 @@ namespace ArmyPlanner
 
             // viewmodels
             .AddTransient<MainViewModel>()
+            .AddTransient<SettingsViewModel>()
 
             .BuildServiceProvider();
 

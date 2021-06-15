@@ -9,13 +9,35 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:navigationmodels="using:ArmyPlanner.Models.Navigation"
     mc:Ignorable="d">
+    <Grid x:Name="ContentGrid" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-    <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+        <StackPanel
+            x:Name="AppTitleBar"
+            Grid.Row="0"
+            Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}"
+            Orientation="Horizontal">
+
+            <Image Margin="8" Source="/Assets/Logo48.png" />
+
+            <TextBlock
+                x:Uid="AppTitleBarTitle"
+                Margin="8"
+                FontSize="24"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                Text="~ArmyPlanner" />
+
+        </StackPanel>
 
         <NavigationView
             x:Name="MainNavigationView"
+            Grid.Row="1"
             IsSettingsVisible="True"
-            MenuItemsSource="{x:Bind ViewModel.Navigation}">
+            MenuItemsSource="{x:Bind ViewModel.Navigation}"
+            PaneDisplayMode="LeftCompact">
 
             <i:Interaction.Behaviors>
                 <ic:EventTriggerBehavior EventName="ItemInvoked" SourceObject="{Binding ElementName=MainNavigationView}">
@@ -37,6 +59,51 @@
 
         </NavigationView>
 
-    </Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <!--  Large window VisualState  -->
+                <VisualState>
 
+                    <!--  Large window trigger  -->
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource LargeWindowBreakpoint}" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="MainNavigationView.PaneDisplayMode" Value="Left" />
+                    </VisualState.Setters>
+
+                </VisualState>
+
+                <!--  Medium window VisualState  -->
+                <VisualState>
+
+                    <!--  Medium window trigger  -->
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource MediumWindowBreakpoint}" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="MainNavigationView.PaneDisplayMode" Value="Left" />
+                    </VisualState.Setters>
+
+                </VisualState>
+
+                <!--  Small window VisualState  -->
+                <VisualState>
+
+                    <!--  Small window trigger  -->
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource MinWindowBreakpoint}" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="MainNavigationView.PaneDisplayMode" Value="LeftCompact" />
+                    </VisualState.Setters>
+
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
 </Page>
