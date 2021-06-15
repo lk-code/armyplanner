@@ -35,6 +35,7 @@
         <NavigationView
             x:Name="MainNavigationView"
             Grid.Row="1"
+            IsPaneOpen="True"
             IsSettingsVisible="True"
             MenuItemsSource="{x:Bind ViewModel.Navigation}"
             PaneDisplayMode="LeftCompact">
@@ -61,30 +62,18 @@
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <!--  Large window VisualState  -->
-                <VisualState>
-
-                    <!--  Large window trigger  -->
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="{StaticResource LargeWindowBreakpoint}" />
-                    </VisualState.StateTriggers>
-
-                    <VisualState.Setters>
-                        <Setter Target="MainNavigationView.PaneDisplayMode" Value="Left" />
-                    </VisualState.Setters>
-
-                </VisualState>
 
                 <!--  Medium window VisualState  -->
                 <VisualState>
 
                     <!--  Medium window trigger  -->
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="{StaticResource MediumWindowBreakpoint}" />
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource BreakpointMd}" />
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
                         <Setter Target="MainNavigationView.PaneDisplayMode" Value="Left" />
+                        <Setter Target="MainNavigationView.IsPaneOpen" Value="True" />
                     </VisualState.Setters>
 
                 </VisualState>
@@ -94,11 +83,12 @@
 
                     <!--  Small window trigger  -->
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="{StaticResource MinWindowBreakpoint}" />
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource BreakpointXs}" />
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
                         <Setter Target="MainNavigationView.PaneDisplayMode" Value="LeftCompact" />
+                        <Setter Target="MainNavigationView.IsPaneOpen" Value="False" />
                     </VisualState.Setters>
 
                 </VisualState>
