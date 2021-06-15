@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ResourceExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Navigation\NavigationItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mvvm\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Logging\LoggingService.cs" />
@@ -64,6 +65,7 @@
     <None Include="$(MSBuildThisFileDirectory)Assets\SharedAssets.md" />
   </ItemGroup>
   <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de\Resources.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
   </ItemGroup>
   <ItemGroup>

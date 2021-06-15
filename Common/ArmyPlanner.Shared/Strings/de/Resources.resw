@@ -127,12 +127,12 @@
     <value>DataLists</value>
   </data>
   <data name="MainNavigation_DataLists.Tooltip" xml:space="preserve">
-    <value>Overview of all available records</value>
+    <value>Übersicht aller verfügbaren Datensätze</value>
   </data>
   <data name="MainNavigation_Overview.Title" xml:space="preserve">
-    <value>Overview</value>
+    <value>Übersicht</value>
   </data>
   <data name="MainNavigation_Overview.Tooltip" xml:space="preserve">
-    <value>Overview of all saved army lists</value>
+    <value>Übersicht aller gespeicherten Armee-Listen</value>
   </data>
 </root>

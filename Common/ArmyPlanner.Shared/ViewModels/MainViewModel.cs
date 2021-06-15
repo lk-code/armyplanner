@@ -1,9 +1,11 @@
 ﻿using ArmyPlanner.Core.Interfaces;
+using ArmyPlanner.Extensions;
 using ArmyPlanner.Models.Navigation;
 using ArmyPlanner.Mvvm;
 using ArmyPlanner.Views;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace ArmyPlanner.ViewModels
@@ -20,6 +22,13 @@ namespace ArmyPlanner.ViewModels
             this.HandleNavigationInvoked(eventArgs);
         }));
 
+        private Visibility _titleBarVisibility;
+        public Visibility TitleBarVisibility
+        {
+            get { return _titleBarVisibility; }
+            set { Set(ref _titleBarVisibility, value); }
+        }
+
         private ObservableCollection<NavigationItem> _navigation;
         public ObservableCollection<NavigationItem> Navigation
         {
@@ -33,23 +42,6 @@ namespace ArmyPlanner.ViewModels
 
         public MainViewModel(ILoggingService loggingService) : base(loggingService)
         {
-            this.Navigation = new ObservableCollection<NavigationItem>()
-            {
-                new NavigationItem
-                {
-                    Title = "~Overview",
-                    Glyph = Symbol.Home,
-                    ToolTip = "~Zurück zur Startseite",
-                    Target = typeof(OverviewPage)
-                },
-                new NavigationItem
-                {
-                    Title = "~DataLists",
-                    Glyph = Symbol.List,
-                    ToolTip = "~Übersicht aller Datensätze",
-                    Target = typeof(DataListsPage)
-                }
-            };
         }
 
         #endregion
@@ -59,6 +51,34 @@ namespace ArmyPlanner.ViewModels
         public void Initialize(Frame contentFrame)
         {
             this._contentFrame = contentFrame ?? throw new System.ArgumentNullException(nameof(contentFrame));
+
+            this.TitleBarVisibility = Visibility.Collapsed;
+#if NETFX_CORE || HAS_UNO_WASM
+            this.TitleBarVisibility = Visibility.Visible;
+#endif
+
+            this.InitializeNavigation();
+        }
+
+        private void InitializeNavigation()
+        {
+            this.Navigation = new ObservableCollection<NavigationItem>()
+            {
+                new NavigationItem
+                {
+                    Title = "MainNavigation_Overview\\Title".GetLocalized(),
+                    Glyph = Symbol.Home,
+                    ToolTip = "MainNavigation_Overview\\Tooltip".GetLocalized(),
+                    Target = typeof(OverviewPage)
+                },
+                new NavigationItem
+                {
+                    Title = "MainNavigation_DataLists\\Title".GetLocalized(),
+                    Glyph = Symbol.List,
+                    ToolTip = "MainNavigation_DataLists\\Tooltip".GetLocalized(),
+                    Target = typeof(DataListsPage)
+                }
+            };
         }
 
         private void HandleNavigationInvoked(NavigationViewItemInvokedEventArgs eventArgs)

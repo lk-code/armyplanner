@@ -8,18 +8,21 @@
     xmlns:local="using:ArmyPlanner.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:navigationmodels="using:ArmyPlanner.Models.Navigation"
+    xmlns:not_skia="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     mc:Ignorable="d">
     <Grid x:Name="ContentGrid" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <StackPanel
             x:Name="AppTitleBar"
             Grid.Row="0"
+            Height="48"
             Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}"
-            Orientation="Horizontal">
+            Orientation="Horizontal"
+            Visibility="{x:Bind ViewModel.TitleBarVisibility}">
 
             <Image Margin="8" Source="/Assets/Logo48.png" />
 
@@ -29,7 +32,6 @@
                 FontSize="24"
                 Style="{StaticResource HeaderTextBlockStyle}"
                 Text="~ArmyPlanner" />
-
         </StackPanel>
 
         <NavigationView
