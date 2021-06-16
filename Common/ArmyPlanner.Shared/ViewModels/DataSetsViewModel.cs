@@ -16,7 +16,7 @@ namespace ArmyPlanner.ViewModels
         public ObservableCollection<DataSetEntry> AvailableDataSets
         {
             get { return _availableDataSets; }
-            set { Set(ref _availableDataSets, value); }
+            set { SetProperty(ref _availableDataSets, value); }
         }
 
         #endregion

@@ -89,7 +89,7 @@
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
-                        <Setter Target="MainNavigationView.PaneDisplayMode" Value="LeftCompact" />
+                        <Setter Target="MainNavigationView.PaneDisplayMode" Value="Left" />
                         <Setter Target="MainNavigationView.IsPaneOpen" Value="False" />
                     </VisualState.Setters>
 

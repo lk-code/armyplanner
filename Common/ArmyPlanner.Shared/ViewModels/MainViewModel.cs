@@ -5,6 +5,7 @@ using ArmyPlanner.Mvvm;
 using ArmyPlanner.Views;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -26,14 +27,14 @@ namespace ArmyPlanner.ViewModels
         public Visibility TitleBarVisibility
         {
             get { return _titleBarVisibility; }
-            set { Set(ref _titleBarVisibility, value); }
+            set { SetProperty(ref _titleBarVisibility, value); }
         }
 
         private ObservableCollection<NavigationItem> _navigation;
         public ObservableCollection<NavigationItem> Navigation
         {
             get { return _navigation; }
-            set { Set(ref _navigation, value); }
+            set { SetProperty(ref _navigation, value); }
         }
 
         #endregion
@@ -42,6 +43,7 @@ namespace ArmyPlanner.ViewModels
 
         public MainViewModel(ILoggingService loggingService) : base(loggingService)
         {
+            this.InitializeNavigation();
         }
 
         #endregion
@@ -56,8 +58,6 @@ namespace ArmyPlanner.ViewModels
 #if NETFX_CORE || HAS_UNO_WASM
             this.TitleBarVisibility = Visibility.Visible;
 #endif
-
-            this.InitializeNavigation();
         }
 
         private void InitializeNavigation()
@@ -66,16 +66,16 @@ namespace ArmyPlanner.ViewModels
             {
                 new NavigationItem
                 {
-                    Title = "MainNavigation_Overview\\Title".GetLocalized(),
+                    Title = "MainNavigation_Overview/Title".GetLocalized(),
                     Glyph = Symbol.Home,
-                    ToolTip = "MainNavigation_Overview\\Tooltip".GetLocalized(),
+                    ToolTip = "MainNavigation_Overview/Tooltip".GetLocalized(),
                     Target = typeof(OverviewPage)
                 },
                 new NavigationItem
                 {
-                    Title = "MainNavigation_DataSets\\Title".GetLocalized(),
+                    Title = "MainNavigation_DataSets/Title".GetLocalized(),
                     Glyph = Symbol.List,
-                    ToolTip = "MainNavigation_DataSets\\Tooltip".GetLocalized(),
+                    ToolTip = "MainNavigation_DataSets/Tooltip".GetLocalized(),
                     Target = typeof(DataSetsPage)
                 }
             };

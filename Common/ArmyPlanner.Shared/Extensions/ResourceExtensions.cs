@@ -13,7 +13,8 @@ namespace ArmyPlanner.Extensions
         /// <returns></returns>
         public static string GetLocalized(this string resourceKey)
         {
-            return _resLoader.GetString(resourceKey);
+            ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
+            return resourceLoader.GetString(resourceKey);
         }
     }
 }
