@@ -20,7 +20,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ResourceExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DataSet\DataSetEntry.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\DataSet\ExplorerItemType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DataSet\GameEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Navigation\NavigationItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mvvm\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Logging\LoggingService.cs" />

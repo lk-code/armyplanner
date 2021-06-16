@@ -28,5 +28,22 @@ namespace ArmyPlanner.Views
         {
             this.ViewModel.Initialize();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string newSearchTextValue = (sender as TextBox).Text;
+
+            this.ViewModel.SearchTextValueChangedCommand.Execute(newSearchTextValue);
+        }
+
+        private void GameFilterComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

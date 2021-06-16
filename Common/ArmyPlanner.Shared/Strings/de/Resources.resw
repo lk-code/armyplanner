@@ -123,6 +123,12 @@
   <data name="AppTitleBarTitle.Text" xml:space="preserve">
     <value>ArmyPlanner</value>
   </data>
+  <data name="DataSetsPage_SearchTextBox.PlaceholderText" xml:space="preserve">
+    <value>Suche nach</value>
+  </data>
+  <data name="DataSets_GameFilterComboBox_AllGames.Text" xml:space="preserve">
+    <value>Alle Spiele</value>
+  </data>
   <data name="MainNavigation_DataLists.Title" xml:space="preserve">
     <value>Datensätze</value>
   </data>

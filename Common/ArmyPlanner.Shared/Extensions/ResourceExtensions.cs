@@ -1,4 +1,5 @@
-﻿using Windows.ApplicationModel.Resources;
+﻿using System;
+using Windows.ApplicationModel.Resources;
 
 namespace ArmyPlanner.Extensions
 {
@@ -13,8 +14,15 @@ namespace ArmyPlanner.Extensions
         /// <returns></returns>
         public static string GetLocalized(this string resourceKey)
         {
-            ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
-            return resourceLoader.GetString(resourceKey);
+            try
+            {
+                ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
+
+                return resourceLoader.GetString(resourceKey);
+            } catch(Exception exception)
+            {
+                return exception.ToString();
+            }
         }
     }
 }

@@ -23,7 +23,6 @@
             Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}"
             Orientation="Horizontal"
             Visibility="{x:Bind ViewModel.TitleBarVisibility}">
-
             <Image Margin="8" Source="/Assets/Logo48.png" />
 
             <TextBlock
