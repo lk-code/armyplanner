@@ -69,7 +69,7 @@
 
                     <!--  Medium window trigger  -->
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="{StaticResource BreakpointMd}" />
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource BreakpointLg}" />
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
@@ -88,7 +88,7 @@
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
-                        <Setter Target="MainNavigationView.PaneDisplayMode" Value="Left" />
+                        <Setter Target="MainNavigationView.PaneDisplayMode" Value="LeftCompact" />
                         <Setter Target="MainNavigationView.IsPaneOpen" Value="False" />
                     </VisualState.Setters>
 

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace ArmyPlanner.ViewModels
@@ -21,12 +22,16 @@ namespace ArmyPlanner.ViewModels
 
         private ICommand _searchTextValueChangedCommand;
         private ICommand _gameFilterSelectionChangedCommand;
+        private ICommand _refreshDataSetsCommand;
 
         public ICommand SearchTextValueChangedCommand => _searchTextValueChangedCommand ?? (_searchTextValueChangedCommand = new RelayCommand<string>((eventArgs) => {
             this.ApplyDataSetsFilter(eventArgs);
         }));
         public ICommand GameFilterSelectionChangedCommand => _gameFilterSelectionChangedCommand ?? (_gameFilterSelectionChangedCommand = new RelayCommand<SelectionChangedEventArgs>((eventArgs) => {
             this.ApplyDataSetsFilter(this.SearchTextValue);
+        }));
+        public ICommand RefreshDataSetsCommand => _refreshDataSetsCommand ?? (_refreshDataSetsCommand = new RelayCommand<SelectionChangedEventArgs>((eventArgs) => {
+            this.LoadDataSets();
         }));
 
         private ObservableCollection<DataSetEntry> _availableDataSetsCollection;
@@ -58,6 +63,27 @@ namespace ArmyPlanner.ViewModels
         {
             get { return _selectedGameFilterEntry; }
             set { SetProperty(ref _selectedGameFilterEntry, value); }
+        }
+        private bool _isLoading;
+        public bool IsLoading
+        {
+            get { return _isLoading; }
+            set {
+                SetProperty(ref _isLoading, value);
+                if(value == true)
+                {
+                    this.IsAvailableDataSetsVisibility = Visibility.Collapsed;
+                } else
+                {
+                    this.IsAvailableDataSetsVisibility = Visibility.Visible;
+                }
+            }
+        }
+        private Visibility _isAvailableDataSetsVisibility;
+        public Visibility IsAvailableDataSetsVisibility
+        {
+            get { return _isAvailableDataSetsVisibility; }
+            set { SetProperty(ref _isAvailableDataSetsVisibility, value); }
         }
 
         #endregion
@@ -147,12 +173,15 @@ namespace ArmyPlanner.ViewModels
 
         private async void LoadDataSets()
         {
+            this.IsLoading = true;
+
             this._availableDataSets.Clear();
             this._availableDataSets = await this._dataSetService.GetAvailableCodiziesAsync();
 
             this.GameFilterCollection.Clear();
             this.GameFilterCollection.Add(new GameEntry("DataSets_GameFilterComboBox_AllGames/Text".GetLocalized(), true));
 
+            this.SearchTextValue = string.Empty;
             this.SelectedGameFilterEntry = this.GameFilterCollection.First();
 
             foreach (Game game in this._availableDataSets)
@@ -166,6 +195,8 @@ namespace ArmyPlanner.ViewModels
             }
 
             this.ApplyDataSetsFilter(this.SearchTextValue);
+
+            this.IsLoading = false;
         }
     }
 

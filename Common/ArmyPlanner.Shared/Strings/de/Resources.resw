@@ -123,6 +123,9 @@
   <data name="AppTitleBarTitle.Text" xml:space="preserve">
     <value>ArmyPlanner</value>
   </data>
+  <data name="DataSetsPage_RefreshAppBarButton.Label" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
   <data name="DataSetsPage_SearchTextBox.PlaceholderText" xml:space="preserve">
     <value>Suche nach</value>
   </data>
