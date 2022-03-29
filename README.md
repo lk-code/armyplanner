@@ -1,5 +1,3 @@
 ## Welcome to ArmyPlanner
 
-You can use the [editor on GitHub](https://github.com/lk-code/armyplanner/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This is where the ArmyPlanner project comes into being, with which you can organize your army for Warhammer and many other tabletop games. With the free [ArmyPlanner Data Format](https://github.com/lk-code/armyplanner-data) in any language.
