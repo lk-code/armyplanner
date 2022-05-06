@@ -25,22 +25,22 @@ jobs:
         dotnet-version: 6.0.x
 
     - name: Restore dependencies
-      run: dotnet restore ./ArmyPlanner.Pages/ArmyPlanner.Pages.csproj
+      run: dotnet restore ArmyPlanner.Pages/ArmyPlanner.Pages.csproj
 
     - name: Build
-      run: dotnet publish ./ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
+      run: dotnet publish ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
 
     - name: Change base-tag in index.html from / to armyplanner
-      run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/armyplanner\/” \/>/g’ ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html
+      run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/armyplanner\/” \/>/g’ ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html
 
     - name: copy index.html to 404.html
-      run: cp ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/404.html
+      run: cp ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/404.html
       
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
       with:
         name: pages
-        path: ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/
+        path: ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/
       
   deploy:
     needs: build 
