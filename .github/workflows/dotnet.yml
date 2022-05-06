@@ -31,10 +31,10 @@ jobs:
       run: dotnet publish ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
 
     - name: Change base-tag in index.html from / to armyplanner
-      run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/armyplanner\/” \/>/g’ ../ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html
+      run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/armyplanner\/” \/>/g’ ../armyplanner/armyplanner/ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html
 
     - name: copy index.html to 404.html
-      run: cp ../ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html ../ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/404.html
+      run: cp ../armyplanner/armyplanner/ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html ../armyplanner/armyplanner/ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/404.html
       
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
