@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: pages
-        path: ./ArmyPlanner.Pages/bin/
+        path: ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/
       
   deploy:
     needs: build 
