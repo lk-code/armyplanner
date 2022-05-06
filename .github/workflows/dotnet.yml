@@ -34,7 +34,7 @@ jobs:
       run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/armyplanner\/” \/>/g’ release/wwwroot/index.html
 
     - name: copy index.html to 404.html
-      run: cp release/wwwroot/index.html release/wwwroot/404.html
+      run: cp ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html release/wwwroot/404.html
       
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
