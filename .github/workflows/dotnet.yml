@@ -31,7 +31,7 @@ jobs:
       run: dotnet publish ./ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
 
     - name: Change base-tag in index.html from / to armyplanner
-      run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/armyplanner\/” \/>/g’ release/wwwroot/index.html
+      run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/armyplanner\/” \/>/g’ ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html
 
     - name: copy index.html to 404.html
       run: cp ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/404.html
