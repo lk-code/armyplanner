@@ -18,14 +18,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
+
     - name: Restore dependencies
       run: dotnet restore ./ArmyPlanner.Pages/ArmyPlanner.Pages.csproj
+
     - name: Build
-      run: dotnet build ./ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
+      run: dotnet publish ./ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
+
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
       with:
@@ -37,11 +41,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
+
     - name: Download artifacts
       uses: actions/download-artifact@v2
       with:
         name: pages
-        path: dist        
+        path: dist      
+        
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2
       with:
