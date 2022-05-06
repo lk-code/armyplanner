@@ -30,6 +30,9 @@ jobs:
     - name: Build
       run: dotnet publish ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
 
+    - name: Directory
+      run: dir
+
     - name: Change base-tag in index.html from / to armyplanner
       run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/armyplanner\/” \/>/g’ ../armyplanner/armyplanner/ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/publish/wwwroot/index.html
 
