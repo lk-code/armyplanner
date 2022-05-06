@@ -23,14 +23,14 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore ./ArmyPlanner.Pages.Wasm/ArmyPlanner.Pages.Wasm.csproj
+      run: dotnet restore ./ArmyPlanner.Pages/ArmyPlanner.Pages.csproj
     - name: Build
-      run: dotnet build ./ArmyPlanner.Pages.Wasm/ArmyPlanner.Pages.Wasm.csproj --no-restore -f $framework -c $config
+      run: dotnet build ./ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
       with:
         name: pages
-        path: ./ArmyPlanner.Pages.Wasm/bin/${{env.config}}/${{env.framework}}/dist/
+        path: ./ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}/dist/
       
   deploy:
     needs: build 
