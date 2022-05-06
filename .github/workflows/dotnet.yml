@@ -30,6 +30,9 @@ jobs:
     - name: Build
       run: dotnet publish ArmyPlanner.Pages/ArmyPlanner.Pages.csproj --no-restore -f $framework -c $config
 
+    - name: cd Directory
+      run: cd ArmyPlanner.Pages
+
     - name: Directory
       run: dir
 
