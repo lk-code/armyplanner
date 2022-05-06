@@ -32,7 +32,7 @@ jobs:
       
     - name: Directory
       run: |
-        cd ArmyPlanner.Pages
+        cd ArmyPlanner.Pages/bin/${{env.config}}/${{env.framework}}
         dir
 
     - name: Change base-tag in index.html from / to armyplanner
