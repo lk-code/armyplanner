@@ -1,8 +1,6 @@
 ﻿@page "/"
 
-@inject IMessageService MessageService
-
-<PageTitle>Index</PageTitle>
+<PageTitle>Home</PageTitle>
 
 <!--slider section start-->
 <div class="hero-section section position-relative">
@@ -14,7 +12,7 @@
 
                     <!--Hero Content start-->
                     <div class="hero-content hero-content-4">
-                        <h1>ALL LATEST GAMES <br> @MessageService.GetTextDemo().ToUpperInvariant() </h1>
+                        <h1>ALL LATEST GAMES</h1>
                         <a class="df-btn" href="#">read more</a>
                     </div>
                     <!--Hero Content end-->
@@ -28,6 +26,7 @@
     <!--Hero Item end-->
 </div>
 <!--slider section end-->
+
 <!--Blog Area Start-->
 <div class="blog-area section pt-100 pt-lg-80 pt-md-70 pt-sm-55 pt-xs-25 pb-xs-50">
     <div class="container container-1520">
@@ -1086,26 +1085,3 @@
     </div>
 </div>
 <!--Blog Area End-->
-<!--Projects section start-->
-<div class="newslatter-section newslatter-section-tow section pt-5 pt-lg-0 pt-md-0 pt-sm-0 pt-xs-0 pb-xs-50">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-12">
-                <!--News Latter Area Start-->
-                <div class="news-latter-area newslatter-black">
-                    <div class="news-latter-box">
-                        <h3>SUBSCRIBE OUR NEWSLETTER, GET ALL <br> LATEST NEWS, UPDATE, VIDEOS AND OFFERS </h3>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your email here">
-                        </form>
-                    </div>
-                </div>
-                <!--News Latter Area End-->
-            </div>
-        </div>
-
-    </div>
-
-</div>
-<!--Projects section end-->

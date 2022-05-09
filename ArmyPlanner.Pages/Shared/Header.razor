@@ -1,4 +1,6 @@
-﻿<!--Header section start-->
+﻿@inject INavigationService NavigationService
+
+<!--Header section start-->
 <header class="header header-static bg-black header-sticky">
     <div class="default-header menu-right">
         <div class="container container-1520">
@@ -13,10 +15,25 @@
                 <!--Logo end-->
                 <!--Menu start-->
                 <div class="col-lg-6 col-12 order-md-3 order-lg-2 d-flex justify-content-center">
+
                     <nav class="main-menu menu-style-2">
+
                         <ul>
+
                             <li>
-                                <a href="index.html">Home</a>
+                                <NavLink href="" Match="NavLinkMatch.All">
+                                    Start
+                                </NavLink>
+                            </li>
+
+                            <li>
+                                <NavLink href="apps" Match="NavLinkMatch.All">
+                                    Apps
+                                </NavLink>
+                            </li>
+
+                            @*<li>
+                                <a href="index.html">home</a>
                                 <ul class="sub-menu">
                                     <li><a href="index.html">Home One</a></li>
                                     <li><a href="index-2.html">Home Two</a></li>
@@ -27,6 +44,7 @@
                                     <li><a href="index-landing.html">Home Landing</a></li>
                                 </ul>
                             </li>
+
                             <li>
                                 <a href="games.html">games</a>
                                 <ul class="sub-menu">
@@ -34,7 +52,9 @@
                                     <li><a href="games-details.html">Games Details</a></li>
                                 </ul>
                             </li>
+
                             <li><a href="video.html">Videos</a></li>
+
                             <li>
                                 <a href="forum.html">Forums</a>
                                 <ul class="sub-menu">
@@ -43,6 +63,7 @@
                                     <li><a href="forum-post.html">Forums Post</a></li>
                                 </ul>
                             </li>
+
                             <li>
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">
@@ -59,29 +80,33 @@
                                     <li><a href="register.html">REGISTER</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+
+                            <li><a href="contact.html">Contact</a></li>*@
+
                         </ul>
+
                     </nav>
+
                 </div>
                 <!--Menu end-->
                 <!--Header Right Wrap-->
-                <div class="col-12 col-md-9 order-md-2 order-lg-3 col-lg-3">
+                @*<div class="col-12 col-md-9 order-md-2 order-lg-3 col-lg-3">
                     <div class="header-right-wrap">
-                        <ul>
-                            <li><a href="login.html">LOGIN</a></li>
-                            <li><a href="register.html">REGISTER</a></li>
-                            <li class="header-search">
-                                <a class="header-search-toggle" href="#"><i class="icofont-search-2"></i></a>
-                                <div class="header-search-form">
-                                    <form action="#">
-                                        <input type="text" placeholder="Type and hit enter">
-                                        <button><i class="icofont-search"></i></button>
-                                    </form>
-                                </div>
-                            </li>
-                        </ul>
+                    <ul>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="register.html">REGISTER</a></li>
+                    <li class="header-search">
+                    <a class="header-search-toggle" href="#"><i class="icofont-search-2"></i></a>
+                    <div class="header-search-form">
+                    <form action="#">
+                    <input type="text" placeholder="Type and hit enter">
+                    <button><i class="icofont-search"></i></button>
+                    </form>
                     </div>
-                </div>
+                    </li>
+                    </ul>
+                    </div>
+                    </div>*@
                 <!--Header Right Wrap-->
 
             </div>
