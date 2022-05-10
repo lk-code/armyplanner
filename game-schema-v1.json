@@ -64,11 +64,11 @@
                                 "description": "the (utc-)timestamp used for update functionality"
                             }
                         },
-                        "additionalProperties": true
+                        "additionalProperties": false
                     }
                 ]
             }
         }
     },
-    "additionalProperties": true
+    "additionalProperties": false
 }

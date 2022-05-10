@@ -1,11 +1,12 @@
 {
     "version": 3,
-    "mappings": "AEAA,AAEI,OAFG,AAEF,MAAM,CAAA;EACH,MAAM,EAAE,IAAI;CACf;;ACJL,AAEI,SAFK,CAEL,GAAG,CAAC;EACA,MAAM,EAAE,KAAK;CAChB",
+    "mappings": "AGAA,AAEI,SAFK,CAEL,GAAG,CAAC;EACA,MAAM,EAAE,KAAK;CAChB",
     "sources": [
         "style.scss",
         "_variables.scss",
-        "cover.scss",
-        "_navbar.scss"
+        "_cover.scss",
+        "_navbar.scss",
+        "_content.scss"
     ],
     "names": [],
     "file": "style.css"
