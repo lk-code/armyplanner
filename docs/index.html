@@ -12,13 +12,20 @@
     title="docsify-darklight-theme"
     type="text/css"
   />
+  <link 
+    rel="stylesheet"
+    href="./css/style.css"
+    type="text/css"
+  />
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'ArmyPlanner',
+      nameLink: '/',
       repo: 'https://github.com/lk-code/armyplanner',
+      logo: '/images/icon.svg',
       search: 'auto', // default
       search : [
         '/',
@@ -41,7 +48,7 @@
       loadSidebar: true,
       loadNavbar: true,
       maxLevel: 4,
-      subMaxLevel: 3,
+      subMaxLevel: 2,
       search: {
         noData: {
           '/': 'No results!'

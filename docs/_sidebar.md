@@ -1,8 +1,7 @@
 - Getting started
 
-  - [Configuration](configuration.md)
-  - [Docsify-themeable-setup](docsifyThemeable.md)
-  - [Theme Support](themeSupport.md)
+  - [Add Content](add-content.md)
+  - [Add New Codex](docsifyThemeable.md)
 
 - Content
   - [Format](format.md)
