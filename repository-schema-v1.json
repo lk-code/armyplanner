@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/repository-schema-v1.json",
+    "type": "object",
+    "title": "The ArmyPlanner Open-Format Repository schema",
+    "description": "this schema comprises the repository JSON format from the ArmyPlanner Open Format.",
+    "required": [
+        "games"
+    ],
+    "properties": {
+        "games": {
+            "type": "array",
+            "title": "the game-list schema",
+            "description": "contains a list of game-index objects.",
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "title": "the game-index schema",
+                        "description": "contains a game-index object with the index-data for the game",
+                        "required": [
+                            "path"
+                        ],
+                        "properties": {
+                            "path": {
+                                "type": "string",
+                                "title": "the game-index path",
+                                "description": "specifies the path to the game directory where the index file is located - note: the path is specified without the index.json"
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}

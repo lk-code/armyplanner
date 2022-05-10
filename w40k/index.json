@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/game-schema-v1.json",
+    "title": "Warhammer 40K",
+    "description": "# Warhammer 40K\n\nmade by Games Workshop Ltd.",
+    "codices": [
+        {
+            "title": "Tau Empire 2022",
+            "description": "# Tau Empire 2022 release\n\nthis is a description\n\nmade by Games Workshop Ltd.",
+            "path": "tau-empire-2022.json",
+            "created": "2022-03-03 13:57:29"
+        },
+        {
+            "title": "Tau Empire 2018",
+            "description": "# Tau Empire 2018 release\n\nthis is a description\n\nmade by Games Workshop Ltd.",
+            "path": "tau-empire-2018.json",
+            "created": "2021-12-27 12:13:40"
+        },
+        {
+            "title": "Tau Empire - Psychic Awakening",
+            "description": "# The Tau Empire - Psychic Awakening\n\nthis is a description\n\nmade by Games Workshop Ltd.",
+            "path": "tau-empire-psychic-awakening-the-greater-good.json",
+            "created": "2021-12-26 12:13:40"
+        },
+        {
+            "title": "Thousand Sons",
+            "description": "# Thousand Sons\n\nthis is a description\n\nmade by Games Workshop Ltd.",
+            "enabled": false,
+            "path": "chaos-thousand-sons-9th-edition.json",
+            "created": "2021-12-19 12:13:40"
+        }
+    ]
+}

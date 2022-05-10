@@ -1,0 +1,331 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/codex-schema-v1.json",
+    "meta": {
+        "created": "2021-12-26 18:45:40",
+        "based-codex": "tau-empire-2018",
+        "game": {
+            "key": "w40k",
+            "name": "{{meta_game_name}}"
+        },
+        "codex": {
+            "key": "tau-empire-psychic-awakening-the-greater-good",
+            "name": "{{meta_codex_name}}"
+        }
+    },
+    "languages": [
+        {
+            "name": "Deutsch (German)",
+            "path": "tau-empire-psychic-awakening-the-greater-good.de.json",
+            "lang": "de"
+        },
+        {
+            "name": "English (English)",
+            "path": "tau-empire-psychic-awakening-the-greater-good.en.json",
+            "lang": "en"
+        }
+    ],
+    "keywords": [
+        {
+            "keyword": "power",
+            "translation": "{{keyword_power}}"
+        },
+        {
+            "keyword": "points",
+            "translation": "{{keyword_points}}"
+        },
+        {
+            "keyword": "weapon",
+            "translation": "{{title_weapon}}"
+        },
+        {
+            "keyword": "weapons",
+            "translation": "{{title_weapons}}"
+        },
+        {
+            "keyword": "range",
+            "translation": "{{title_range}}"
+        },
+        {
+            "keyword": "type",
+            "translation": "{{title_type}}"
+        },
+        {
+            "keyword": "strength",
+            "translation": "{{title_strength}}"
+        },
+        {
+            "keyword": "armour-penetration",
+            "translation": "{{title_armour_penetration}}"
+        },
+        {
+            "keyword": "damage",
+            "translation": "{{title_damage}}"
+        },
+        {
+            "keyword": "abilities",
+            "translation": "{{title_abilities}}"
+        },
+        {
+            "keyword": "name",
+            "translation": "{{title_name}}"
+        },
+        {
+            "keyword": "move",
+            "translation": "{{title_move}}"
+        },
+        {
+            "keyword": "weapon-skill",
+            "translation": "{{title_weapon_skill}}"
+        },
+        {
+            "keyword": "ballistic-skill",
+            "translation": "{{title_ballistic_skill}}"
+        },
+        {
+            "keyword": "toughness",
+            "translation": "{{title_toughness}}"
+        },
+        {
+            "keyword": "wounds",
+            "translation": "{{title_wounds}}"
+        },
+        {
+            "keyword": "attacks",
+            "translation": "{{title_attacks}}"
+        },
+        {
+            "keyword": "leadership",
+            "translation": "{{title_leadership}}"
+        },
+        {
+            "keyword": "save",
+            "translation": "{{title_save}}"
+        },
+        {
+            "keyword": "weapons-ranged",
+            "translation": "{{title_weapons_ranged}}"
+        },
+        {
+            "keyword": "weapons-melee",
+            "translation": "{{title_weapons_melee}}"
+        },
+        {
+            "keyword": "wargear",
+            "translation": "{{title_wargear}}"
+        },
+        {
+            "keyword": "system",
+            "translation": "{{title_system}}"
+        },
+        {
+            "keyword": "effect",
+            "translation": "{{title_effect}}"
+        },
+        {
+            "keyword": "battle-roll",
+            "translation": "{{title_battle_roll}}"
+        },
+        {
+            "keyword": "power",
+            "translation": "{{title_power}}"
+        },
+        {
+            "keyword": "unit",
+            "translation": "{{title_unit}}"
+        },
+        {
+            "keyword": "units",
+            "translation": "{{title_units}}"
+        },
+        {
+            "keyword": "wargear",
+            "translation": "{{title_wargear}}"
+        },
+        {
+            "keyword": "hq",
+            "translation": "{{title_unit_hq}}"
+        },
+        {
+            "keyword": "troops",
+            "translation": "{{title_unit_troops}}"
+        },
+        {
+            "keyword": "elites",
+            "translation": "{{title_unit_elites}}"
+        },
+        {
+            "keyword": "fast-attack",
+            "translation": "{{title_unit_fast_attack}}"
+        },
+        {
+            "keyword": "flyer",
+            "translation": "{{title_unit_flyer}}"
+        },
+        {
+            "keyword": "heavy-support",
+            "translation": "{{title_unit_heavy_support}}"
+        },
+        {
+            "keyword": "fortification",
+            "translation": "{{title_unit_fortification}}"
+        },
+        {
+            "keyword": "transport",
+            "translation": "{{title_unit_transport}}"
+        },
+        {
+            "keyword": "lord-of-war",
+            "translation": "{{title_unit_lord_of_war}}"
+        },
+        {
+            "keyword": "faction",
+            "translation": "{{title_faction}}"
+        }
+    ],
+    "units": [
+        {
+            "id": "hq_commander_shadowsun",
+            "name": "{{hq_commander_shadowsun_name}}",
+            "description": "{{hq_commander_shadowsun_description}}",
+            "unit-type": "hq",
+            "power": 9,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_tau_sept}}"
+            ],
+            "weapons": [
+                "weapon_dispersed_fusion_blaster",
+                "weapon_flechette_launcher",
+                "weapon_high_energy_fusion_blaster",
+                "weapon_light_missile_pod",
+                "weapon_pulse_pistol"
+            ],
+            "characteristics": [
+                {
+                    "name": "{{hq_commander_shadowsun_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "2+",
+                    "strength": "4",
+                    "toughness": "4",
+                    "wounds": "5",
+                    "attacks": "4",
+                    "leadership": "9",
+                    "save": "3+"
+                },
+                {
+                    "name": "{{sub_mv52_shield_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "name": "{{sub_mv62_command_link_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        }
+    ],
+    "weapons": [
+        {
+            "id": "weapon_dispersed_fusion_blaster",
+            "name": "{{weapon_dispersed_fusion_blaster_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "2",
+            "strength": "7",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,3}}",
+            "abilities": [
+                "{{ability_half_range_additional_d3_when_inflicting_damage}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_flechette_launcher",
+            "name": "{{weapon_flechette_launcher_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_pistol}}",
+            "dices": "4",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_high_energy_fusion_blaster",
+            "name": "{{weapon_high_energy_fusion_blaster_name}}",
+            "weapon-type": "ranged",
+            "range": "24\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "1",
+            "strength": "8",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,6}}",
+            "abilities": [
+                "{{ability_half_range_additional_d6_when_inflicting_damage}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_light_missile_pod",
+            "name": "{{weapon_light_missile_pod_name}}",
+            "weapon-type": "ranged",
+            "range": "24\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "1",
+            "strength": "7",
+            "armour-penetration": "-1",
+            "damage": "{{title_dices,3}}",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_pistol",
+            "name": "{{weapon_pulse_pistol_name}}",
+            "weapon-type": "ranged",
+            "range": "12\"",
+            "type": "{{weapon_type_pistol}}",
+            "dices": "1",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        }
+    ],
+    "wargear": [],
+    "ui": [
+        {
+            "element": "unit-list",
+            "items": [
+                "power",
+                "name"
+            ]
+        },
+        {
+            "element": "wargear-list",
+            "items": [
+                "name",
+                "effect"
+            ]
+        }
+    ]
+}

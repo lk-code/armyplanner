@@ -1,0 +1,3099 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/codex-schema-v1.json",
+    "meta": {
+        "created": "2021-12-27 18:45:40",
+        "game": {
+            "key": "w40k",
+            "name": "{{meta_game_name}}"
+        },
+        "codex": {
+            "key": "tau-empire-2018",
+            "name": "{{meta_codex_name}}"
+        }
+    },
+    "languages": [
+        {
+            "name": "Deutsch (German)",
+            "path": "tau-empire-2018.de.json",
+            "lang": "de"
+        },
+        {
+            "name": "English (English)",
+            "path": "tau-empire-2018.en.json",
+            "lang": "en"
+        }
+    ],
+    "keywords": [
+        {
+            "keyword": "power",
+            "translation": "{{keyword_power}}"
+        },
+        {
+            "keyword": "points",
+            "translation": "{{keyword_points}}"
+        },
+        {
+            "keyword": "weapon",
+            "translation": "{{title_weapon}}"
+        },
+        {
+            "keyword": "weapons",
+            "translation": "{{title_weapons}}"
+        },
+        {
+            "keyword": "range",
+            "translation": "{{title_range}}"
+        },
+        {
+            "keyword": "type",
+            "translation": "{{title_type}}"
+        },
+        {
+            "keyword": "strength",
+            "translation": "{{title_strength}}"
+        },
+        {
+            "keyword": "armour-penetration",
+            "translation": "{{title_armour_penetration}}"
+        },
+        {
+            "keyword": "damage",
+            "translation": "{{title_damage}}"
+        },
+        {
+            "keyword": "abilities",
+            "translation": "{{title_abilities}}"
+        },
+        {
+            "keyword": "name",
+            "translation": "{{title_name}}"
+        },
+        {
+            "keyword": "move",
+            "translation": "{{title_move}}"
+        },
+        {
+            "keyword": "weapon-skill",
+            "translation": "{{title_weapon_skill}}"
+        },
+        {
+            "keyword": "ballistic-skill",
+            "translation": "{{title_ballistic_skill}}"
+        },
+        {
+            "keyword": "toughness",
+            "translation": "{{title_toughness}}"
+        },
+        {
+            "keyword": "wounds",
+            "translation": "{{title_wounds}}"
+        },
+        {
+            "keyword": "attacks",
+            "translation": "{{title_attacks}}"
+        },
+        {
+            "keyword": "leadership",
+            "translation": "{{title_leadership}}"
+        },
+        {
+            "keyword": "save",
+            "translation": "{{title_save}}"
+        },
+        {
+            "keyword": "weapons-ranged",
+            "translation": "{{title_weapons_ranged}}"
+        },
+        {
+            "keyword": "weapons-melee",
+            "translation": "{{title_weapons_melee}}"
+        },
+        {
+            "keyword": "wargear",
+            "translation": "{{title_wargear}}"
+        },
+        {
+            "keyword": "system",
+            "translation": "{{title_system}}"
+        },
+        {
+            "keyword": "effect",
+            "translation": "{{title_effect}}"
+        },
+        {
+            "keyword": "battle-roll",
+            "translation": "{{title_battle_roll}}"
+        },
+        {
+            "keyword": "power",
+            "translation": "{{title_power}}"
+        },
+        {
+            "keyword": "unit",
+            "translation": "{{title_unit}}"
+        },
+        {
+            "keyword": "units",
+            "translation": "{{title_units}}"
+        },
+        {
+            "keyword": "wargear",
+            "translation": "{{title_wargear}}"
+        },
+        {
+            "keyword": "hq",
+            "translation": "{{title_unit_hq}}"
+        },
+        {
+            "keyword": "troops",
+            "translation": "{{title_unit_troops}}"
+        },
+        {
+            "keyword": "elites",
+            "translation": "{{title_unit_elites}}"
+        },
+        {
+            "keyword": "fast-attack",
+            "translation": "{{title_unit_fast_attack}}"
+        },
+        {
+            "keyword": "flyer",
+            "translation": "{{title_unit_flyer}}"
+        },
+        {
+            "keyword": "heavy-support",
+            "translation": "{{title_unit_heavy_support}}"
+        },
+        {
+            "keyword": "fortification",
+            "translation": "{{title_unit_fortification}}"
+        },
+        {
+            "keyword": "transport",
+            "translation": "{{title_unit_transport}}"
+        },
+        {
+            "keyword": "lord-of-war",
+            "translation": "{{title_unit_lord_of_war}}"
+        },
+        {
+            "keyword": "faction",
+            "translation": "{{title_faction}}"
+        }
+    ],
+    "units": [
+        {
+            "id": "hq_commander_shadowsun",
+            "name": "{{hq_commander_shadowsun_name}}",
+            "description": "{{hq_commander_shadowsun_description}}",
+            "unit-type": "hq",
+            "power": 9,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_tau_sept}}"
+            ],
+            "weapons": [
+                "weapon_fusion_blaster"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_commander_shadowsun_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "2+",
+                    "strength": "4",
+                    "toughness": "4",
+                    "wounds": "5",
+                    "attacks": "4",
+                    "leadership": "9",
+                    "save": "3+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 2,
+                    "name": "{{sub_mv52_shield_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_mv62_command_link_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "hq_commander_farsight",
+            "name": "{{hq_commander_farsight_name}}",
+            "description": "{{hq_commander_farsight_description}}",
+            "unit-type": "hq",
+            "power": 8,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_farsight_enclaves}}"
+            ],
+            "weapons": [
+                "weapon_high_intensity_plasma_rifle",
+                "weapon_dawn_blade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_commander_farsight_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "2+",
+                    "ballistic-skill": "2+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "6",
+                    "attacks": "4",
+                    "leadership": "9",
+                    "save": "3+"
+                }
+            ]
+        },
+        {
+            "id": "hq_commander_xv8_crisis",
+            "name": "{{hq_commander_xv8_crisis_name}}",
+            "description": "{{hq_commander_xv8_crisis_description}}",
+            "unit-type": "hq",
+            "power": 7,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_missile_pod"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_commander_xv8_crisis_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "2+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "5",
+                    "attacks": "4",
+                    "leadership": "9",
+                    "save": "3+"
+                }
+            ]
+        },
+        {
+            "id": "hq_commander_xv85_enforcer",
+            "name": "{{hq_commander_xv85_enforcer_name}}",
+            "description": "{{hq_commander_xv85_enforcer_description}}",
+            "unit-type": "hq",
+            "power": 7,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_missile_pod"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_commander_xv85_enforcer_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "2+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "6",
+                    "attacks": "4",
+                    "leadership": "9",
+                    "save": "3+"
+                }
+            ]
+        },
+        {
+            "id": "hq_commander_xv86_coldstar",
+            "name": "{{hq_commander_xv86_coldstar_name}}",
+            "description": "{{hq_commander_xv86_coldstar_description}}",
+            "unit-type": "hq",
+            "power": 8,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_high_output_burst_cannon",
+                "weapon_missile_pod"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_commander_xv86_coldstar_name}}",
+                    "move": "20\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "2+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "6",
+                    "attacks": "4",
+                    "leadership": "9",
+                    "save": "3+"
+                }
+            ]
+        },
+        {
+            "id": "hq_aun_va",
+            "name": "{{hq_aun_va_name}}",
+            "description": "{{hq_aun_va_description}}",
+            "unit-type": "hq",
+            "power": 5,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_tau_sept}}"
+            ],
+            "weapons": [
+                "weapon_honour_blade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_aun_va_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "6+",
+                    "ballistic-skill": "4+",
+                    "strength": "2",
+                    "toughness": "3",
+                    "wounds": "6",
+                    "attacks": "1",
+                    "leadership": "9",
+                    "save": "5+"
+                },
+                {
+                    "countMin": 2,
+                    "countMax": 2,
+                    "name": "{{sub_ethereal_guard_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "3+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "2",
+                    "attacks": "3",
+                    "leadership": "9",
+                    "save": "5+"
+                }
+            ]
+        },
+        {
+            "id": "hq_aun_shi",
+            "name": "{{hq_aun_shi_name}}",
+            "description": "{{hq_aun_shi_description}}",
+            "unit-type": "hq",
+            "power": 3,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_viorla_sept}}"
+            ],
+            "weapons": [
+                "weapon_honour_blade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_aun_shi_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "2+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "5",
+                    "attacks": "5",
+                    "leadership": "9",
+                    "save": "-"
+                }
+            ]
+        },
+        {
+            "id": "hq_ethereal",
+            "name": "{{hq_ethereal_name}}",
+            "description": "{{hq_ethereal_description}}",
+            "unit-type": "hq",
+            "power": 2,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_equalizers",
+                "weapon_honour_blade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_ethereal_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "4",
+                    "attacks": "3",
+                    "leadership": "9",
+                    "save": "5+"
+                }
+            ]
+        },
+        {
+            "id": "hq_cadre_fireblade",
+            "name": "{{hq_cadre_fireblade_name}}",
+            "description": "{{hq_cadre_fireblade_description}}",
+            "unit-type": "hq",
+            "power": 2,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_pulse_rifle",
+                "weapon_markerlight",
+                "weapon_photon_grenade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_cadre_fireblade_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "2+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "5",
+                    "attacks": "3",
+                    "leadership": "8",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "hq_darkstrider",
+            "name": "{{hq_darkstrider_name}}",
+            "description": "{{hq_darkstrider_description}}",
+            "unit-type": "hq",
+            "power": 3,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_tau_sept}}"
+            ],
+            "weapons": [
+                "weapon_pulse_carbine",
+                "weapon_markerlight",
+                "weapon_photon_grenade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_darkstrider_name}}",
+                    "move": "7\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "2+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "5",
+                    "attacks": "3",
+                    "leadership": "8",
+                    "save": "5+"
+                }
+            ]
+        },
+        {
+            "id": "hq_longstrike",
+            "name": "{{hq_longstrike_name}}",
+            "description": "{{hq_longstrike_description}}",
+            "unit-type": "hq",
+            "power": 10,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_tau_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_ion_cannon",
+                "weapon_seeker_missile",
+                "weapon_railgun",
+                "weapon_pulse_carbine",
+                "weapon_smart_missile_system"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{hq_longstrike_name}}",
+                    "move": "*",
+                    "weapon-skill": "6+",
+                    "ballistic-skill": "*",
+                    "strength": "6",
+                    "toughness": "7",
+                    "wounds": "13",
+                    "attacks": "*",
+                    "leadership": "8",
+                    "save": "3+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 7-13+",
+                            "move": "12\"",
+                            "ballistic-skill": "2+",
+                            "wounds": "*",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 4-6",
+                            "move": "6\"",
+                            "ballistic-skill": "3+",
+                            "wounds": "*",
+                            "attacks": "{{title_dices,3}}"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-3",
+                            "move": "3\"",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "attacks": "1"
+                        }
+                    ]
+                },
+                {
+                    "countMin": 2,
+                    "countMax": 2,
+                    "name": "{{sub_mv1_gun_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "troops_breacher_team",
+            "name": "{{troops_breacher_team_name}}",
+            "description": "{{troops_breacher_team_description}}",
+            "unit-type": "troops",
+            "power": 2,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_pulse_blaster",
+                "weapon_pulse_pistol",
+                "weapon_missile_pod",
+                "weapon_smart_missile_system",
+                "weapon_markerlight",
+                "weapon_photon_grenade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 5,
+                    "countMax": 5,
+                    "name": "{{sub_fire_warrior_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_fire_warrior_shas_ui_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "2",
+                    "leadership": "7",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_ds8_tactical_support_turret_name}}",
+                    "move": "-",
+                    "weapon-skill": "-",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "0",
+                    "leadership": "4",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_mv36_guardian_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "troops_strike_team",
+            "name": "{{troops_strike_team_name}}",
+            "description": "{{troops_strike_team_description}}",
+            "unit-type": "troops",
+            "power": 2,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_pulse_rifle",
+                "weapon_pulse_carbine",
+                "weapon_pulse_pistol",
+                "weapon_missile_pod",
+                "weapon_smart_missile_system",
+                "weapon_markerlight",
+                "weapon_photon_grenade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 5,
+                    "countMax": 5,
+                    "name": "{{sub_fire_warrior_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_fire_warrior_shas_ui_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "2",
+                    "leadership": "7",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_ds8_tactical_support_turret_name}}",
+                    "move": "-",
+                    "weapon-skill": "-",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "0",
+                    "leadership": "4",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_mv36_guardian_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "troops_kroot_carnivores",
+            "name": "{{troops_kroot_carnivores_name}}",
+            "description": "{{troops_kroot_carnivores_description}}",
+            "unit-type": "troops",
+            "power": 3,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_kroot}}"
+            ],
+            "weapons": [
+                "weapon_kroot_rifle",
+                "weapon_kroot_rifle_melee"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 10,
+                    "countMax": 10,
+                    "name": "{{troops_kroot_carnivores_name}}",
+                    "move": "7\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "6+"
+                }
+            ]
+        },
+        {
+            "id": "elites_kroot_shaper",
+            "name": "{{elites_kroot_shaper_name}}",
+            "description": "{{elites_kroot_shaper_description}}",
+            "unit-type": "elites",
+            "power": 2,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_kroot}}"
+            ],
+            "weapons": [
+                "weapon_kroot_rifle",
+                "weapon_pulse_rifle",
+                "weapon_kroot_rifle_melee",
+                "weapon_ritual_blade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{elites_kroot_shaper_name}}",
+                    "move": "7\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "5",
+                    "attacks": "3",
+                    "leadership": "7",
+                    "save": "6+"
+                }
+            ]
+        },
+        {
+            "id": "elites_krootox_riders",
+            "name": "{{elites_krootox_riders_name}}",
+            "description": "{{elites_krootox_riders_description}}",
+            "unit-type": "elites",
+            "power": 2,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_kroot}}"
+            ],
+            "weapons": [
+                "weapon_kroot_gun",
+                "weapon_krootox_fists"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{elites_krootox_riders_name}}",
+                    "move": "7\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "4+",
+                    "strength": "6",
+                    "toughness": "5",
+                    "wounds": "4",
+                    "attacks": "2",
+                    "leadership": "6",
+                    "save": "6+"
+                }
+            ]
+        },
+        {
+            "id": "elites_xv25_stealth_battlesuits",
+            "name": "{{elites_xv25_stealth_battlesuits_name}}",
+            "description": "{{elites_xv25_stealth_battlesuits_description}}",
+            "unit-type": "elites",
+            "power": 6,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_fusion_blaster",
+                "weapon_markerlight"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 3,
+                    "countMax": 3,
+                    "name": "{{sub_xv25_stealth_shas_ui_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "4",
+                    "toughness": "4",
+                    "wounds": "2",
+                    "attacks": "2",
+                    "leadership": "7",
+                    "save": "3+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_xv25_stealth_vre_ui_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "4",
+                    "toughness": "4",
+                    "wounds": "2",
+                    "attacks": "2",
+                    "leadership": "8",
+                    "save": "3+"
+                }
+            ]
+        },
+        {
+            "id": "elites_xv8_crisis_battlesuits",
+            "name": "{{elites_xv8_crisis_battlesuits_name}}",
+            "description": "{{elites_xv8_crisis_battlesuits_description}}",
+            "unit-type": "elites",
+            "power": 12,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 3,
+                    "countMax": 3,
+                    "name": "{{sub_xv8_crisis_shas_ui_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "3",
+                    "attacks": "2",
+                    "leadership": "7",
+                    "save": "3+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_xv8_crisis_vre_ui_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "3",
+                    "attacks": "3",
+                    "leadership": "8",
+                    "save": "3+"
+                }
+            ]
+        },
+        {
+            "id": "elites_xv8_crisis_bodyguards",
+            "name": "{{elites_xv8_crisis_bodyguards_name}}",
+            "description": "{{elites_xv8_crisis_bodyguards_description}}",
+            "unit-type": "elites",
+            "power": 13,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 3,
+                    "countMax": 3,
+                    "name": "{{sub_xv8_crisis_bodyguard_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "3",
+                    "attacks": "3",
+                    "leadership": "8",
+                    "save": "3+"
+                }
+            ]
+        },
+        {
+            "id": "elites_firesight_marksman",
+            "name": "{{elites_firesight_marksman_name}}",
+            "description": "{{elites_firesight_marksman_description}}",
+            "unit-type": "elites",
+            "power": 1,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_pulse_pistol",
+                "weapon_markerlight"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{elites_firesight_marksman_name}}",
+                    "move": "5\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "3+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "3",
+                    "attacks": "2",
+                    "leadership": "7",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "elites_xv95_ghostkeel_battlesuit",
+            "name": "{{elites_xv95_ghostkeel_battlesuit_name}}",
+            "description": "{{elites_xv95_ghostkeel_battlesuit_description}}",
+            "unit-type": "elites",
+            "power": 10,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_flamer",
+                "weapon_fusion_blaster",
+                "weapon_fusion_collider",
+                "weapon_cyclic_ion_raker"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{sub_xv95_ghostkeel_shas_vre_name}}",
+                    "move": "*",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "*",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "3",
+                    "attacks": "*",
+                    "leadership": "7",
+                    "save": "4+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 6-10+",
+                            "move": "12\"",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 3-5",
+                            "move": "8\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "2"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-2",
+                            "move": "4\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "1"
+                        }
+                    ]
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 2,
+                    "name": "{{sub_mv5_stealth_drone_name}}",
+                    "move": "12\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "4",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "elites_xv104_riptide_battlesuit",
+            "name": "{{elites_xv104_riptide_battlesuit_name}}",
+            "description": "{{elites_xv104_riptide_battlesuit_description}}",
+            "unit-type": "elites",
+            "power": 14,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_fusion_blaster",
+                "weapon_ion_accelerator",
+                "weapon_plasma_riffle",
+                "weapon_missile_pod",
+                "weapon_smart_missile_system",
+                "weapon_heavy_burst_cannon"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{sub_xv104_riptide_shas_vre_name}}",
+                    "move": "*",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "*",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "3",
+                    "attacks": "*",
+                    "leadership": "7",
+                    "save": "4+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 7-14+",
+                            "move": "12\"",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "attacks": "4"
+                        },
+                        {
+                            "name": "{{title_wounds}} 4-6",
+                            "move": "8\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-3",
+                            "move": "4\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "2"
+                        }
+                    ]
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 2,
+                    "name": "{{sub_mv84_shielded_missile_drone_name}}",
+                    "move": "12\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "4",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "fastattack_pathfinder_team",
+            "name": "{{fastattack_pathfinder_team_name}}",
+            "description": "{{fastattack_pathfinder_team_description}}",
+            "unit-type": "fast-attack",
+            "power": 3,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_ion_rifle",
+                "weapon_rail_rifle",
+                "weapon_pulse_carbine",
+                "weapon_pulse_pistol",
+                "weapon_markerlight",
+                "weapon_photon_grenade"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 5,
+                    "countMax": 5,
+                    "name": "{{sub_pathfinder_name}}",
+                    "move": "7\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "5+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_pathfinder_shas_ui_name}}",
+                    "move": "7\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "2",
+                    "leadership": "7",
+                    "save": "5+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_mv31_pulse_accelerator_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_mv33_grav_inhibitor_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_mb3_recon_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "4",
+                    "toughness": "4",
+                    "wounds": "2",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "fastattack_tx4_piranhas",
+            "name": "{{fastattack_tx4_piranhas_name}}",
+            "description": "{{fastattack_tx4_piranhas_description}}",
+            "unit-type": "fast-attack",
+            "power": 4,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_fusion_blaster",
+                "weapon_seeker_missile",
+                "weapon_pulse_carbine"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{fastattack_tx4_piranhas_name}}",
+                    "move": "16\"",
+                    "weapon-skill": "6+",
+                    "ballistic-skill": "4+",
+                    "strength": "4",
+                    "toughness": "5",
+                    "wounds": "6",
+                    "attacks": "2",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 2,
+                    "countMax": 2,
+                    "name": "{{sub_mv1_gun_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "fastattack_tactical_drones",
+            "name": "{{fastattack_tactical_drones_name}}",
+            "description": "{{fastattack_tactical_drones_description}}",
+            "unit-type": "fast-attack",
+            "power": 2,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_pulse_carbine",
+                "weapon_markerlight"
+            ],
+            "characteristics": [
+                {
+                    "name": "{{sub_mv1_gun_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "name": "{{sub_mv4_shield_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                },
+                {
+                    "name": "{{sub_mv7_marker_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "fastattack_vespid_stingwings",
+            "name": "{{fastattack_vespid_stingwings_name}}",
+            "description": "{{fastattack_vespid_stingwings_description}}",
+            "unit-type": "fast-attack",
+            "power": 3,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_kroot}}"
+            ],
+            "weapons": [
+                "weapon_neutron_blaster"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 4,
+                    "countMax": 4,
+                    "name": "{{fastattack_vespid_stingwing_name}}",
+                    "move": "14\"",
+                    "weapon-skill": "4+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "5",
+                    "save": "4+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_vespid_strain_leader_name}}",
+                    "move": "14\"",
+                    "weapon-skill": "4+",
+                    "ballistic-skill": "4+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "2",
+                    "leadership": "8",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "fastattack_kroot_hounds",
+            "name": "{{fastattack_kroot_hounds_name}}",
+            "description": "{{fastattack_kroot_hounds_description}}",
+            "unit-type": "fast-attack",
+            "power": 1,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_vespid}}"
+            ],
+            "weapons": [
+                "weapon_ripping_fangs"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 4,
+                    "countMax": 4,
+                    "name": "{{fastattack_kroot_hound_name}}",
+                    "move": "12\"",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "-",
+                    "strength": "3",
+                    "toughness": "3",
+                    "wounds": "1",
+                    "attacks": "2",
+                    "leadership": "5",
+                    "save": "6+"
+                }
+            ]
+        },
+        {
+            "id": "flyer_ax3_razorshark_strike_fighter",
+            "name": "{{flyer_ax3_razorshark_strike_fighter_name}}",
+            "description": "{{flyer_ax3_razorshark_strike_fighter_description}}",
+            "unit-type": "flyer",
+            "power": 8,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_seeker_missile",
+                "weapon_pulse_carbine",
+                "weapon_smart_missile_system"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{flyer_ax3_razorshark_strike_fighter_name}}",
+                    "move": "*",
+                    "weapon-skill": "3+",
+                    "ballistic-skill": "*",
+                    "strength": "6",
+                    "toughness": "6",
+                    "wounds": "12",
+                    "attacks": "*",
+                    "leadership": "6",
+                    "save": "4+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 7-12+",
+                            "move": "20\"-50\"",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 4-6",
+                            "move": "20\"-30\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "{{title_dices,3}}"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-3",
+                            "move": "20\"-25\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "flyer_ax39_sun_shark_bomber",
+            "name": "{{flyer_ax39_sun_shark_bomber_name}}",
+            "description": "{{flyer_ax39_sun_shark_bomber_description}}",
+            "unit-type": "flyer",
+            "power": 9,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_quad_ion_turret",
+                "weapon_seeker_missile",
+                "weapon_missile_pod"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{flyer_ax39_sun_shark_bomber_name}}",
+                    "move": "*",
+                    "weapon-skill": "6+",
+                    "ballistic-skill": "*",
+                    "strength": "6",
+                    "toughness": "6",
+                    "wounds": "12",
+                    "attacks": "*",
+                    "leadership": "6",
+                    "save": "4+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 7-12+",
+                            "move": "20\"-50\"",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 4-6",
+                            "move": "20\"-30\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "{{title_dices,3}}"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-3",
+                            "move": "20\"-25\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "1"
+                        }
+                    ]
+                },
+                {
+                    "name": "{{sub_mv17_interceptor_drone_name}}",
+                    "move": "20\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "heavysupport_xv88_broadside_battlesuits",
+            "name": "{{heavysupport_xv88_broadside_battlesuits_name}}",
+            "description": "{{heavysupport_xv88_broadside_battlesuits_description}}",
+            "unit-type": "heavy-support",
+            "power": 7,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_high_yield_missile_pod",
+                "weapon_seeker_missile",
+                "weapon_plasma_riffle",
+                "weapon_missile_pod",
+                "weapon_smart_missile_system",
+                "weapon_heavy_rail_rifle"
+            ],
+            "characteristics": [
+                {
+                    "countMin": 1,
+                    "countMax": 1,
+                    "name": "{{sub_xv88_broadside_shas_ui_name}}",
+                    "move": "5\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "6",
+                    "attacks": "2",
+                    "leadership": "7",
+                    "save": "2+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 1,
+                    "name": "{{sub_xv88_broadside_shas_vre_name}}",
+                    "move": "5\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "4+",
+                    "strength": "5",
+                    "toughness": "5",
+                    "wounds": "6",
+                    "attacks": "3",
+                    "leadership": "8",
+                    "save": "2+"
+                },
+                {
+                    "countMin": 0,
+                    "countMax": 2,
+                    "name": "{{sub_mv8_missile_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "heavysupport_tx7_hammerhead_gunship",
+            "name": "{{heavysupport_tx7_hammerhead_gunship_name}}",
+            "description": "{{heavysupport_tx7_hammerhead_gunship_description}}",
+            "unit-type": "heavy-support",
+            "power": 9,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_ion_cannon",
+                "weapon_seeker_missile",
+                "weapon_railgun",
+                "weapon_pulse_carbine",
+                "weapon_smart_missile_system"
+            ],
+            "characteristics": [
+                {
+                    "name": "{{heavysupport_tx7_hammerhead_gunship_name}}",
+                    "move": "*",
+                    "weapon-skill": "6+",
+                    "ballistic-skill": "*",
+                    "strength": "6",
+                    "toughness": "7",
+                    "wounds": "13",
+                    "attacks": "*",
+                    "leadership": "8",
+                    "save": "3+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 7-13+",
+                            "move": "12\"",
+                            "ballistic-skill": "3+",
+                            "wounds": "*",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 4-6",
+                            "move": "6\"",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "attacks": "{{title_dices,3}}"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-3",
+                            "move": "3\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "1"
+                        }
+                    ]
+                },
+                {
+                    "name": "{{sub_mv1_gun_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "heavysupport_tx78_sky_raygunship",
+            "name": "{{heavysupport_tx78_sky_raygunship_name}}",
+            "description": "{{heavysupport_tx78_sky_raygunship_description}}",
+            "unit-type": "heavy-support",
+            "power": 8,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_seeker_missile",
+                "weapon_pulse_carbine",
+                "weapon_smart_missile_system",
+                "weapon_markerlight"
+            ],
+            "characteristics": [
+                {
+                    "name": "{{heavysupport_tx78_sky_raygunship_name}}",
+                    "move": "*",
+                    "weapon-skill": "6+",
+                    "ballistic-skill": "*",
+                    "strength": "6",
+                    "toughness": "7",
+                    "wounds": "13",
+                    "attacks": "*",
+                    "leadership": "8",
+                    "save": "3+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 7-13+",
+                            "move": "12\"",
+                            "ballistic-skill": "3+",
+                            "wounds": "*",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 4-6",
+                            "move": "6\"",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "attacks": "{{title_dices,3}}"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-3",
+                            "move": "3\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "1"
+                        }
+                    ]
+                },
+                {
+                    "name": "{{sub_mv1_gun_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "heavysupport_mv71_sniper_drones",
+            "name": "{{heavysupport_mv71_sniper_drones_name}}",
+            "description": "{{heavysupport_mv71_sniper_drones_description}}",
+            "unit-type": "heavy-support",
+            "power": 3,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_longshot_pulse_rifle"
+            ],
+            "characteristics": [
+                {
+                    "name": "{{heavysupport_mv71_sniper_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "fortification_tidewall_shieldline",
+            "name": "{{fortification_tidewall_shieldline_name}}",
+            "description": "{{fortification_tidewall_shieldline_description}}",
+            "unit-type": "fortification",
+            "power": 4,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [],
+            "characteristics": [
+                {
+                    "name": "{{fortification_tidewall_shieldline_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "-",
+                    "ballistic-skill": "-",
+                    "strength": "-",
+                    "toughness": "6",
+                    "wounds": "10",
+                    "attacks": "-",
+                    "leadership": "-",
+                    "save": "4+"
+                },
+                {
+                    "name": "{{sub_tidewall_defence_platform_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "-",
+                    "ballistic-skill": "-",
+                    "strength": "-",
+                    "toughness": "7",
+                    "wounds": "10",
+                    "attacks": "-",
+                    "leadership": "-",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "fortification_tidewall_droneport",
+            "name": "{{fortification_tidewall_droneport_name}}",
+            "description": "{{fortification_tidewall_droneport_description}}",
+            "unit-type": "fortification",
+            "power": 5,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [],
+            "characteristics": [
+                {
+                    "name": "{{fortification_tidewall_droneport_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "-",
+                    "ballistic-skill": "-",
+                    "strength": "-",
+                    "toughness": "7",
+                    "wounds": "10",
+                    "attacks": "-",
+                    "leadership": "-",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "fortification_tidewall_gunrig",
+            "name": "{{fortification_tidewall_gunrig_name}}",
+            "description": "{{fortification_tidewall_gunrig_description}}",
+            "unit-type": "fortification",
+            "power": 6,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_supremacy_railgun"
+            ],
+            "characteristics": [
+                {
+                    "name": "{{fortification_tidewall_gunrig_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "-",
+                    "ballistic-skill": "5+",
+                    "strength": "-",
+                    "toughness": "7",
+                    "wounds": "10",
+                    "attacks": "-",
+                    "leadership": "-",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "transport_ty7_devilfish",
+            "name": "{{transport_ty7_devilfish_name}}",
+            "description": "{{transport_ty7_devilfish_description}}",
+            "unit-type": "transport",
+            "power": 6,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_seeker_missile",
+                "weapon_pulse_carbine",
+                "weapon_smart_missile_system"
+            ],
+            "characteristics": [
+                {
+                    "name": "{{transport_ty7_devilfish_name}}",
+                    "move": "*",
+                    "weapon-skill": "6+",
+                    "ballistic-skill": "*",
+                    "strength": "6",
+                    "toughness": "7",
+                    "wounds": "12",
+                    "attacks": "*",
+                    "leadership": "8",
+                    "save": "3+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 7-12+",
+                            "move": "12\"",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 4-6",
+                            "move": "6\"",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "attacks": "{{title_dices,3}}"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-3",
+                            "move": "3\"",
+                            "ballistic-skill": "6+",
+                            "wounds": "*",
+                            "attacks": "1"
+                        }
+                    ]
+                },
+                {
+                    "name": "{{sub_mv1_gun_drone_name}}",
+                    "move": "8\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "5+",
+                    "strength": "3",
+                    "toughness": "4",
+                    "wounds": "1",
+                    "attacks": "1",
+                    "leadership": "6",
+                    "save": "4+"
+                }
+            ]
+        },
+        {
+            "id": "lordofwar_kv128_stormsurge",
+            "name": "{{lordofwar_kv128_stormsurge_name}}",
+            "description": "{{lordofwar_kv128_stormsurge_description}}",
+            "unit-type": "lord-of-war",
+            "power": 20,
+            "factions": [
+                "{{faction_tau_empire}}",
+                "{{faction_sept}}"
+            ],
+            "weapons": [
+                "weapon_burst_cannon",
+                "weapon_flamer",
+                "weapon_pulse_driver_cannon",
+                "weapon_pulse_blaster_cannon",
+                "weapon_cluster_rocket_system",
+                "weapon_smart_missile_system",
+                "weapon_airbursting_fragmentation_projector",
+                "weapon_destroyer_missile"
+            ],
+            "characteristics": [
+                {
+                    "name": "{{lordofwar_kv128_stormsurge_name}}",
+                    "move": "6\"",
+                    "weapon-skill": "5+",
+                    "ballistic-skill": "*",
+                    "strength": "*",
+                    "toughness": "7",
+                    "wounds": "20",
+                    "attacks": "*",
+                    "leadership": "8",
+                    "save": "3+",
+                    "damage-profiles": [
+                        {
+                            "name": "{{title_wounds}} 11-20+",
+                            "ballistic-skill": "4+",
+                            "wounds": "*",
+                            "strength": "8",
+                            "attacks": "3"
+                        },
+                        {
+                            "name": "{{title_wounds}} 6-10",
+                            "ballistic-skill": "5+",
+                            "wounds": "*",
+                            "strength": "7",
+                            "attacks": "{{title_dices,3}}"
+                        },
+                        {
+                            "name": "{{title_wounds}} 1-5",
+                            "ballistic-skill": "6+",
+                            "wounds": "*",
+                            "strength": "6",
+                            "attacks": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "weapons": [
+        {
+            "id": "weapon_burst_cannon",
+            "name": "{{weapon_burst_cannon_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "4",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_flamer",
+            "name": "{{weapon_flamer_name}}",
+            "weapon-type": "ranged",
+            "range": "8\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "{{title_dices,6}}",
+            "strength": "4",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [
+                "{{ability_hits_automatically}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_fusion_blaster",
+            "name": "{{weapon_fusion_blaster_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "1",
+            "strength": "8",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,6}}",
+            "abilities": [
+                "{{ability_half_range_two_dices_lower_value}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_fusion_collider",
+            "name": "{{weapon_fusion_collider_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "{{title_dices,3}}",
+            "strength": "8",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,6}}",
+            "abilities": [
+                "{{ability_half_range_two_dices_lower_value}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_high_intensity_plasma_rifle",
+            "name": "{{weapon_high_intensity_plasma_rifle_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_rapid_fire}}",
+            "dices": "1",
+            "strength": "6",
+            "armour-penetration": "-4",
+            "damage": "2",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_high_output_burst_cannon",
+            "name": "{{weapon_high_output_burst_cannon_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "8",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_high_yield_missile_pod",
+            "name": "{{weapon_high_yield_missile_pod_name}}",
+            "weapon-type": "ranged",
+            "range": "36\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "4",
+            "strength": "7",
+            "armour-penetration": "-1",
+            "damage": "{{title_dices,3}}",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_quad_ion_turret",
+            "name": "{{weapon_quad_ion_turret_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}",
+                "{{ability_add_one_hit_rolls_not_flyer}}"
+            ],
+            "profiles": [
+                "weapon_quad_ion_turret_profile_standard",
+                "weapon_quad_ion_turret_profile_overcharge"
+            ]
+        },
+        {
+            "id": "weapon_quad_ion_turret_profile_standard",
+            "is-profile": true,
+            "name": "{{weapon_quad_ion_turret_profile_standard_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "4",
+            "strength": "7",
+            "armour-penetration": "-1",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_quad_ion_turret_profile_overcharge",
+            "is-profile": true,
+            "name": "{{weapon_quad_ion_turret_profile_overcharge_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "4",
+            "strength": "8",
+            "armour-penetration": "-1",
+            "damage": "{{title_dices,3}}",
+            "abilities": [
+                "{{ability_hit_roll_one_suffer_wound}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_ion_accelerator",
+            "name": "{{weapon_ion_accelerator_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}"
+            ],
+            "profiles": [
+                "weapon_ion_accelerator_profile_standard",
+                "weapon_ion_accelerator_profile_overcharge"
+            ]
+        },
+        {
+            "id": "weapon_ion_accelerator_profile_standard",
+            "is-profile": true,
+            "name": "{{weapon_ion_accelerator_profile_standard_name}}",
+            "weapon-type": "ranged",
+            "range": "72\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "{{title_dices,6}}",
+            "strength": "8",
+            "armour-penetration": "-3",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_ion_accelerator_profile_overcharge",
+            "is-profile": true,
+            "name": "{{weapon_ion_accelerator_profile_overcharge_name}}",
+            "weapon-type": "ranged",
+            "range": "72\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "{{title_dices,6}}",
+            "strength": "9",
+            "armour-penetration": "-3",
+            "damage": "3",
+            "abilities": [
+                "{{ability_hit_roll_one_suffer_wound}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_ion_rifle",
+            "name": "{{weapon_ion_rifle_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}"
+            ],
+            "profiles": [
+                "weapon_ion_rifle_profile_standard",
+                "weapon_ion_rifle_profile_overcharge"
+            ]
+        },
+        {
+            "id": "weapon_ion_rifle_profile_standard",
+            "is-profile": true,
+            "name": "{{weapon_ion_rifle_profile_standard_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_rapid_fire}}",
+            "dices": "1",
+            "strength": "7",
+            "armour-penetration": "-1",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_ion_rifle_profile_overcharge",
+            "is-profile": true,
+            "name": "{{weapon_ion_rifle_profile_overcharge_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "{{title_dices,3}}",
+            "strength": "8",
+            "armour-penetration": "-1",
+            "damage": "2",
+            "abilities": [
+                "{{ability_hit_roll_one_suffer_wound}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_ion_cannon",
+            "name": "{{weapon_ion_cannon_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}"
+            ],
+            "profiles": [
+                "weapon_ion_cannon_profile_standard",
+                "weapon_ion_cannon_profile_overcharge"
+            ]
+        },
+        {
+            "id": "weapon_ion_cannon_profile_standard",
+            "is-profile": true,
+            "name": "{{weapon_ion_cannon_profile_standard_name}}",
+            "weapon-type": "ranged",
+            "range": "60\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "3",
+            "strength": "7",
+            "armour-penetration": "-2",
+            "damage": "2",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_ion_cannon_profile_overcharge",
+            "is-profile": true,
+            "name": "{{weapon_ion_cannon_profile_overcharge_name}}",
+            "weapon-type": "ranged",
+            "range": "60\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "{{title_dices,6}}",
+            "strength": "8",
+            "armour-penetration": "-2",
+            "damage": "3",
+            "abilities": [
+                "{{ability_hit_roll_one_suffer_wound}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_kroot_rifle",
+            "name": "{{weapon_kroot_rifle_name}}",
+            "weapon-type": "ranged",
+            "range": "24\"",
+            "type": "{{weapon_type_rapid_fire}}",
+            "dices": "1",
+            "strength": "4",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_seeker_missile",
+            "name": "{{weapon_seeker_missile_name}}",
+            "weapon-type": "ranged",
+            "range": "72\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "1",
+            "strength": "8",
+            "armour-penetration": "-2",
+            "damage": "{{title_dices,6}}",
+            "abilities": [
+                "{{ability_seeker_missile_one_per_battle}}",
+                "{{ability_hits_only_roll_of_six}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_railgun",
+            "name": "{{weapon_railgun_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}"
+            ],
+            "profiles": [
+                "weapon_railgun_profile_solid_shot",
+                "weapon_railgun_profile_submunitions"
+            ]
+        },
+        {
+            "id": "weapon_railgun_profile_solid_shot",
+            "is-profile": true,
+            "name": "{{weapon_railgun_profile_solid_shot_name}}",
+            "weapon-type": "ranged",
+            "range": "72\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "1",
+            "strength": "10",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,6}}",
+            "abilities": [
+                "{{ability_wound_roll_of_six_d3_mortal_wounds}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_railgun_profile_submunitions",
+            "is-profile": true,
+            "name": "{{weapon_railgun_profile_submunitions_name}}",
+            "weapon-type": "ranged",
+            "range": "72\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "{{title_dices,6}}",
+            "strength": "6",
+            "armour-penetration": "-1",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_rail_rifle",
+            "name": "{{weapon_rail_rifle_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_rapid_fire}}",
+            "dices": "1",
+            "strength": "6",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,3}}",
+            "abilities": [
+                "{{ability_wound_roll_of_six_one_mortal_wounds}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_neutron_blaster",
+            "name": "{{weapon_neutron_blaster_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "2",
+            "strength": "5",
+            "armour-penetration": "-2",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_photon_grenade",
+            "name": "{{weapon_photon_grenade_name}}",
+            "weapon-type": "ranged",
+            "range": "12\"",
+            "type": "{{weapon_type_grenade}}",
+            "dices": "{{title_dices,6}}",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_weapon_no_damage}}",
+                "{{ability_photon_grenade_subtract_one_from_any_hit_rolls}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_plasma_riffle",
+            "name": "{{weapon_plasma_riffle_name}}",
+            "weapon-type": "ranged",
+            "range": "24\"",
+            "type": "{{weapon_type_rapid_fire}}",
+            "dices": "1",
+            "strength": "6",
+            "armour-penetration": "-3",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_driver_cannon",
+            "name": "{{weapon_pulse_driver_cannon_name}}",
+            "weapon-type": "ranged",
+            "range": "72\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "{{title_dices,6}}",
+            "strength": "10",
+            "armour-penetration": "-3",
+            "damage": "{{title_dices,6}}",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_blaster",
+            "name": "{{weapon_pulse_blaster_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}"
+            ],
+            "profiles": [
+                "weapon_pulse_blaster_profile_close_range",
+                "weapon_pulse_blaster_profile_medium_range",
+                "weapon_pulse_blaster_profile_long_range"
+            ]
+        },
+        {
+            "id": "weapon_pulse_blaster_profile_close_range",
+            "is-profile": true,
+            "name": "{{weapon_pulse_blaster_profile_close_range_name}}",
+            "weapon-type": "ranged",
+            "range": "5\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "2",
+            "strength": "6",
+            "armour-penetration": "-2",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_blaster_profile_medium_range",
+            "is-profile": true,
+            "name": "{{weapon_pulse_blaster_profile_medium_range_name}}",
+            "weapon-type": "ranged",
+            "range": "10\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "2",
+            "strength": "5",
+            "armour-penetration": "-1",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_blaster_profile_long_range",
+            "is-profile": true,
+            "name": "{{weapon_pulse_blaster_profile_long_range_name}}",
+            "weapon-type": "ranged",
+            "range": "15\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "2",
+            "strength": "4",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_blaster_cannon",
+            "name": "{{weapon_pulse_blaster_cannon_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}"
+            ],
+            "profiles": [
+                "weapon_pulse_blaster_cannon_profile_close_range",
+                "weapon_pulse_blaster_cannon_profile_medium_range",
+                "weapon_pulse_blaster_cannon_profile_long_range"
+            ]
+        },
+        {
+            "id": "weapon_pulse_blaster_cannon_profile_close_range",
+            "is-profile": true,
+            "name": "{{weapon_pulse_blaster_cannon_profile_close_range_name}}",
+            "weapon-type": "ranged",
+            "range": "10\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "2",
+            "strength": "14",
+            "armour-penetration": "-4",
+            "damage": "6",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_blaster_cannon_profile_medium_range",
+            "is-profile": true,
+            "name": "{{weapon_pulse_blaster_cannon_profile_medium_range_name}}",
+            "weapon-type": "ranged",
+            "range": "20\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "4",
+            "strength": "12",
+            "armour-penetration": "-2",
+            "damage": "4",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_blaster_cannon_profile_long_range",
+            "is-profile": true,
+            "name": "{{weapon_pulse_blaster_cannon_profile_long_range_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "6",
+            "strength": "10",
+            "armour-penetration": "0",
+            "damage": "2",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_bombs",
+            "name": "{{weapon_pulse_bombs_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_pulse_bombs}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_rifle",
+            "name": "{{weapon_pulse_rifle_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_rapid_fire}}",
+            "dices": "1",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_carbine",
+            "name": "{{weapon_pulse_carbine_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "2",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_pulse_pistol",
+            "name": "{{weapon_pulse_pistol_name}}",
+            "weapon-type": "ranged",
+            "range": "12\"",
+            "type": "{{weapon_type_pistol}}",
+            "dices": "1",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_cluster_rocket_system",
+            "name": "{{weapon_cluster_rocket_system_name}}",
+            "weapon-type": "ranged",
+            "range": "48\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "{{title_dices,6,4}}",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_missile_pod",
+            "name": "{{weapon_missile_pod_name}}",
+            "weapon-type": "ranged",
+            "range": "36\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "2",
+            "strength": "7",
+            "armour-penetration": "-1",
+            "damage": "{{title_dices,3}}",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_smart_missile_system",
+            "name": "{{weapon_smart_missile_system_name}}",
+            "weapon-type": "ranged",
+            "range": "30\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "4",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [
+                "{{ability_fired_to_not_visible_units}}",
+                "{{ability_no_bonus_to_saving_throws}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_heavy_burst_cannon",
+            "name": "{{weapon_heavy_burst_cannon_name}}",
+            "weapon-type": "ranged",
+            "range": "36\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "12",
+            "strength": "6",
+            "armour-penetration": "-1",
+            "damage": "2",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_kroot_gun",
+            "name": "{{weapon_kroot_gun_name}}",
+            "weapon-type": "ranged",
+            "range": "48\"",
+            "type": "{{weapon_type_rapid_fire}}",
+            "dices": "1",
+            "strength": "7",
+            "armour-penetration": "-1",
+            "damage": "{{title_dices,3}}",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_heavy_rail_rifle",
+            "name": "{{weapon_heavy_rail_rifle_name}}",
+            "weapon-type": "ranged",
+            "range": "60\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "2",
+            "strength": "8",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,6}}",
+            "abilities": [
+                "{{ability_wound_roll_of_six_one_mortal_wounds}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_airbursting_fragmentation_projector",
+            "name": "{{weapon_airbursting_fragmentation_projector_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "{{title_dices,6}}",
+            "strength": "4",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [
+                "{{ability_fired_to_not_visible_units}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_supremacy_railgun",
+            "name": "{{weapon_supremacy_railgun_name}}",
+            "weapon-type": "ranged",
+            "range": "72\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "2",
+            "strength": "10",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,6}}",
+            "abilities": [
+                "{{ability_wound_roll_of_six_d3_mortal_wounds}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_longshot_pulse_rifle",
+            "name": "{{weapon_longshot_pulse_rifle_name}}",
+            "weapon-type": "ranged",
+            "range": "48\"",
+            "type": "{{weapon_type_rapid_fire}}",
+            "dices": "1",
+            "strength": "5",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [
+                "{{ability_ignore_look_out_sir}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_destroyer_missile",
+            "name": "{{weapon_destroyer_missile_name}}",
+            "weapon-type": "ranged",
+            "range": "60\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "1",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_weapon_hit_suffers_d3_mortal_wounds}}",
+                "{{ability_destroyer_missile_one_per_battle}}",
+                "{{ability_hits_only_roll_of_six}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_markerlight",
+            "name": "{{weapon_markerlight_name}}",
+            "weapon-type": "ranged",
+            "range": "36\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "1",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_markerlight}}"
+            ],
+            "profiles": [
+                "weapon_markerlight_profile_one_marker",
+                "weapon_markerlight_profile_two_marker",
+                "weapon_markerlight_profile_three_marker",
+                "weapon_markerlight_profile_four_marker",
+                "weapon_markerlight_profile_five_more_marker"
+            ]
+        },
+        {
+            "id": "weapon_markerlight_profile_one_marker",
+            "is-profile": true,
+            "name": "{{weapon_markerlight_profile_one_marker_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_markerlight_one_marker}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_markerlight_profile_two_marker",
+            "is-profile": true,
+            "name": "{{weapon_markerlight_profile_two_marker_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_markerlight_two_marker}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_markerlight_profile_three_marker",
+            "is-profile": true,
+            "name": "{{weapon_markerlight_profile_three_marker_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_markerlight_three_marker}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_markerlight_profile_four_marker",
+            "is-profile": true,
+            "name": "{{weapon_markerlight_profile_four_marker_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_markerlight_four_marker}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_markerlight_profile_five_more_marker",
+            "is-profile": true,
+            "name": "{{weapon_markerlight_profile_five_more_marker_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_markerlight_five_more_marker}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_cyclic_ion_blaster",
+            "name": "{{weapon_cyclic_ion_blaster_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}"
+            ],
+            "profiles": [
+                "weapon_cyclic_ion_blaster_profile_standard",
+                "weapon_cyclic_ion_blaster_profile_overcharge"
+            ]
+        },
+        {
+            "id": "weapon_cyclic_ion_blaster_profile_standard",
+            "is-profile": true,
+            "name": "{{weapon_cyclic_ion_blaster_profile_standard_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "3",
+            "strength": "7",
+            "armour-penetration": "-1",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_cyclic_ion_blaster_profile_overcharge",
+            "is-profile": true,
+            "name": "{{weapon_cyclic_ion_blaster_profile_overcharge_name}}",
+            "weapon-type": "ranged",
+            "range": "18\"",
+            "type": "{{weapon_type_assault}}",
+            "dices": "3",
+            "strength": "8",
+            "armour-penetration": "-1",
+            "damage": "{{title_dices,3}}",
+            "abilities": [
+                "{{ability_wound_roll_of_six_one_mortal_wounds}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_cyclic_ion_raker",
+            "name": "{{weapon_cyclic_ion_raker_name}}",
+            "weapon-type": "ranged",
+            "range": "",
+            "type": "",
+            "dices": "",
+            "strength": "",
+            "armour-penetration": "",
+            "damage": "",
+            "abilities": [
+                "{{ability_select_profile}}"
+            ],
+            "profiles": [
+                "weapon_cyclic_ion_raker_standard",
+                "weapon_cyclic_ion_raker_overcharge"
+            ]
+        },
+        {
+            "id": "weapon_cyclic_ion_raker_standard",
+            "is-profile": true,
+            "name": "{{weapon_cyclic_ion_raker_standard_name}}",
+            "weapon-type": "ranged",
+            "range": "24\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "6",
+            "strength": "7",
+            "armour-penetration": "-1",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_cyclic_ion_raker_overcharge",
+            "is-profile": true,
+            "name": "{{weapon_cyclic_ion_raker_overcharge_name}}",
+            "weapon-type": "ranged",
+            "range": "24\"",
+            "type": "{{weapon_type_heavy}}",
+            "dices": "6",
+            "strength": "8",
+            "armour-penetration": "-1",
+            "damage": "{{title_dices,3}}",
+            "abilities": [
+                "{{ability_wound_roll_of_six_one_mortal_wounds}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_equalizers",
+            "name": "{{weapon_equalizers_name}}",
+            "weapon-type": "melee",
+            "range": "{{weapon_type_melee}}",
+            "type": "{{weapon_type_melee}}",
+            "dices": "",
+            "strength": "{{title_melee_user}}",
+            "armour-penetration": "-1",
+            "damage": "1",
+            "abilities": [
+                "{{ability_equalizer_attack_increase_one}}"
+            ],
+            "profiles": []
+        },
+        {
+            "id": "weapon_honour_blade",
+            "name": "{{weapon_honour_blade_name}}",
+            "weapon-type": "melee",
+            "range": "{{weapon_type_melee}}",
+            "type": "{{weapon_type_melee}}",
+            "dices": "",
+            "strength": "+2",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_dawn_blade",
+            "name": "{{weapon_dawn_blade_name}}",
+            "weapon-type": "melee",
+            "range": "{{weapon_type_melee}}",
+            "type": "{{weapon_type_melee}}",
+            "dices": "",
+            "strength": "+3",
+            "armour-penetration": "-4",
+            "damage": "{{title_dices,3}}",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_kroot_rifle_melee",
+            "name": "{{weapon_kroot_rifle_melee_name}}",
+            "weapon-type": "melee",
+            "range": "{{weapon_type_melee}}",
+            "type": "{{weapon_type_melee}}",
+            "dices": "",
+            "strength": "+1",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_krootox_fists",
+            "name": "{{weapon_krootox_fists_name}}",
+            "weapon-type": "melee",
+            "range": "{{weapon_type_melee}}",
+            "type": "{{weapon_type_melee}}",
+            "dices": "",
+            "strength": "{{title_melee_user}}",
+            "armour-penetration": "0",
+            "damage": "2",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_ripping_fangs",
+            "name": "{{weapon_ripping_fangs_name}}",
+            "weapon-type": "melee",
+            "range": "{{weapon_type_melee}}",
+            "type": "{{weapon_type_melee}}",
+            "dices": "",
+            "strength": "{{title_melee_user}}",
+            "armour-penetration": "-1",
+            "damage": "1",
+            "abilities": [],
+            "profiles": []
+        },
+        {
+            "id": "weapon_ritual_blade",
+            "name": "{{weapon_ritual_blade_name}}",
+            "weapon-type": "melee",
+            "range": "{{weapon_type_melee}}",
+            "type": "{{weapon_type_melee}}",
+            "dices": "",
+            "strength": "{{title_melee_user}}",
+            "armour-penetration": "0",
+            "damage": "1",
+            "abilities": [
+                "{{ability_ritual_blade_kroot_no_moral_tests}}"
+            ],
+            "profiles": []
+        }
+    ],
+    "wargear": [
+        {
+            "id": "wargear_drone_controller",
+            "name": "{{wargear_drone_controller_name}}",
+            "effect": "{{ability_wargear_drone_controller}}"
+        },
+        {
+            "id": "wargear_target_lock",
+            "name": "{{wargear_target_lock_name}}",
+            "effect": "{{ability_wargear_target_lock}}"
+        },
+        {
+            "id": "wargear_early_warning_override",
+            "name": "{{wargear_early_warning_override_name}}",
+            "effect": "{{ability_wargear_early_warning_override}}"
+        },
+        {
+            "id": "wargear_counterfire_defence_system",
+            "name": "{{wargear_counterfire_defence_system_name}}",
+            "effect": "{{ability_wargear_counterfire_defence_system}}"
+        },
+        {
+            "id": "wargear_advanced_targeting_system",
+            "name": "{{wargear_advanced_targeting_system_name}}",
+            "effect": "{{ability_wargear_advanced_targeting_system}}"
+        },
+        {
+            "id": "wargear_velocity_tracker",
+            "name": "{{wargear_velocity_tracker_name}}",
+            "effect": "{{ability_wargear_velocity_tracker}}"
+        },
+        {
+            "id": "wargear_multi_tracker",
+            "name": "{{wargear_multi_tracker_name}}",
+            "effect": "{{ability_wargear_multi_tracker}}"
+        },
+        {
+            "id": "wargear_shield_generator",
+            "name": "{{wargear_shield_generator_name}}",
+            "effect": "{{ability_wargear_shield_generator}}"
+        },
+        {
+            "id": "wargear_xv8_02_crisis_iridium_battlesuit",
+            "name": "{{wargear_xv8_02_crisis_iridium_battlesuit_name}}",
+            "effect": "{{ability_wargear_xv8_02_crisis_iridium_battlesuit}}"
+        }
+    ],
+    "ui": [
+        {
+            "element": "unit-list",
+            "items": [
+                "power",
+                "name"
+            ]
+        },
+        {
+            "element": "wargear-list",
+            "items": [
+                "name",
+                "effect"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/game-schema-v1.json",
+    "title": "Warhammer - Age of Sigmar",
+    "description": "# Warhammer: Age of Sigmar\n\nmade by Games Workshop Ltd.",
+    "codices": [
+        {
+            "title": "Humans - 3th Edition",
+            "description": "# Demo Content\n\nthis is a description\n\nmade by Games Workshop Ltd.",
+            "path": "placeholder.json",
+            "created": ""
+        },
+        {
+            "title": "Elfs - 3th Edition",
+            "description": "# Demo Content\n\nthis is a description\n\nmade by Games Workshop Ltd.",
+            "path": "placeholder.json",
+            "created": ""
+        },
+        {
+            "title": "Dwarfs - 3th Edition",
+            "description": "# Demo Content\n\nthis is a description\n\nmade by Games Workshop Ltd.",
+            "path": "placeholder.json",
+            "created": ""
+        }
+    ]
+}

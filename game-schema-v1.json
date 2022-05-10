@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/game-schema-v1.json",
+    "type": "object",
+    "title": "The ArmyPlanner Open-Format Game-Index schema",
+    "description": "This schema comprises the game-index JSON format from the ArmyPlanner Open Format.",
+    "required": [
+        "title",
+        "description",
+        "codices"
+    ],
+    "properties": {
+        "title": {
+            "type": "string",
+            "title": "the title of the game",
+            "description": "contains the title of the game (like the name was given by the editor)"
+        },
+        "description": {
+            "type": "string",
+            "title": "an optional description for the game",
+            "description": "contains a description of the game - note: the description is given as markdown code"
+        },
+        "codices": {
+            "type": "array",
+            "title": "the codex-list schema",
+            "description": "contains a list of codex-index objects",
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "title": "the codex-index schema",
+                        "description": "contains a codex-index object with the index-data for the codex",
+                        "required": [
+                            "title",
+                            "path",
+                            "created"
+                        ],
+                        "properties": {
+                            "title": {
+                                "type": "string",
+                                "title": "the title of the codex",
+                                "description": "contains the title of the codex (like the name was given by the editor)"
+                            },
+                            "description": {
+                                "type": "string",
+                                "title": "a description for the codex",
+                                "description": "contains a description for the codex - note: the description is given as markdown code"
+                            },
+                            "enabled": {
+                                "type": "boolean",
+                                "title": "an optional parameter for the codex to enable or disable this codex entry",
+                                "description": "If false, this codx entry should not be loaded. If enabled is not set, the codex can be loaded as well.",
+                                "default": false
+                            },
+                            "path": {
+                                "type": "string",
+                                "title": "the codex-index path",
+                                "description": "specifies the path to the codex-file"
+                            },
+                            "created": {
+                                "type": "string",
+                                "title": "the timestamp of the latest edit",
+                                "description": "the (utc-)timestamp used for update functionality"
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}

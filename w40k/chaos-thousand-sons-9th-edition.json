@@ -1,0 +1,151 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/codex-schema-v1.json",
+    "meta": {
+        "created": "2021-12-19 12:13:40",
+        "game": {
+            "key": "w40k",
+            "name": "{{meta_game_name}}"
+        },
+        "codex": {
+            "key": "chaos-thousand-sons-9th-edition",
+            "name": "{{meta_codex_name}}"
+        }
+    },
+    "languages": [
+        {
+            "name": "Deutsch (German)",
+            "path": "chaos-thousand-sons-9th-edition.de.json",
+            "lang": "de"
+        },
+        {
+            "name": "English (English)",
+            "path": "chaos-thousand-sons-9th-edition.en.json",
+            "lang": "en"
+        }
+    ],
+    "header": {
+        "weapon": "{{title_weapon}}",
+        "weapons": "{{title_weapons}}",
+        "range": "{{title_range}}",
+        "type": "{{title_type}}",
+        "strength": "{{title_strength}}",
+        "armour-penetration": "{{title_armour_penetration}}",
+        "damage": "{{title_damage}}",
+        "abilities": "{{title_abilities}}",
+        "name": "{{title_name}}",
+        "move": "{{title_move}}",
+        "weapon-skill": "{{title_weapon_skill}}",
+        "ballistic-skill": "{{title_ballistic_skill}}",
+        "toughness": "{{title_toughness}}",
+        "wounds": "{{title_wounds}}",
+        "attacks": "{{title_attacks}}",
+        "leadership": "{{title_leadership}}",
+        "save": "{{title_save}}",
+        "weapons-ranged": "{{title_weapons_ranged}}",
+        "weapons-melee": "{{title_weapons_melee}}",
+        "wargear": "{{title_wargear}}",
+        "system": "{{title_system}}",
+        "effect": "{{title_effect}}",
+        "battle-roll": "{{title_battle_roll}}",
+        "power": "{{title_power}}",
+        "unit": "{{title_unit}}",
+        "units": "{{title_units}}",
+        "unit-hq": "{{title_unit_hq}}",
+        "unit-troops": "{{title_unit_troops}}",
+        "unit-elites": "{{title_unit_elites}}",
+        "unit-fast-attack": "{{title_unit_fast_attack}}",
+        "unit-flyer": "{{title_unit_flyer}}",
+        "unit-heavy-support": "{{title_unit_heavy_support}}",
+        "unit-fortification": "{{title_unit_fortification}}",
+        "unit-transport": "{{title_unit_transport}}",
+        "unit-lord-of-war": "{{title_unit_lord_of_war}}",
+        "faction": "{{title_faction}}"
+    },
+    "units": {
+        "hq": [],
+        "troops": [],
+        "elites": [],
+        "fast-attack": [],
+        "flyer": [],
+        "heavy-support": [],
+        "fortification": [],
+        "transport": [],
+        "lord-of-war": []
+    },
+    "weapons": {
+        "ranged": [
+            {
+                "id": "weapon_cyclic_ion_raker",
+                "name": "{{weapon_cyclic_ion_raker_name}}",
+                "weapon-type": "ranged",
+                "range": "",
+                "type": "",
+                "dices": "",
+                "strength": "",
+                "armour-penetration": "",
+                "damage": "",
+                "abilities": [
+                    "{{ability_select_profile}}"
+                ],
+                "profiles": [
+                    "weapon_cyclic_ion_raker_standard",
+                    "weapon_cyclic_ion_raker_overcharge"
+                ]
+            },
+            {
+                "id": "weapon_cyclic_ion_raker_standard",
+                "is-profile": true,
+                "name": "{{weapon_cyclic_ion_raker_standard_name}}",
+                "weapon-type": "ranged",
+                "range": "24\"",
+                "type": "{{weapon_type_heavy}}",
+                "dices": "6",
+                "strength": "7",
+                "armour-penetration": "-1",
+                "damage": "1",
+                "abilities": [],
+                "profiles": []
+            },
+            {
+                "id": "weapon_cyclic_ion_raker_overcharge",
+                "is-profile": true,
+                "name": "{{weapon_cyclic_ion_raker_overcharge_name}}",
+                "weapon-type": "ranged",
+                "range": "24\"",
+                "type": "{{weapon_type_heavy}}",
+                "dices": "6",
+                "strength": "8",
+                "armour-penetration": "-1",
+                "damage": "{{title_dices,3}}",
+                "abilities": [
+                    "{{ability_wound_roll_of_six_one_mortal_wounds}}"
+                ],
+                "profiles": []
+            }
+        ],
+        "melee": [
+            {
+                "id": "weapon_equalizers",
+                "name": "{{weapon_equalizers_name}}",
+                "weapon-type": "melee",
+                "range": "{{weapon_type_melee}}",
+                "type": "{{weapon_type_melee}}",
+                "dices": "",
+                "strength": "{{title_melee_user}}",
+                "armour-penetration": "-1",
+                "damage": "1",
+                "abilities": [
+                    "{{ability_equalizer_attack_increase_one}}"
+                ],
+                "profiles": []
+            }
+        ]
+    },
+    "wargear": [
+        {
+            "id": "wargear_drone_controller",
+            "name": "{{wargear_drone_controller_name}}",
+            "effect": "{{ability_wargear_drone_controller}}"
+        }
+    ]
+}

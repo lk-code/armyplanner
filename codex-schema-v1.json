@@ -1,0 +1,686 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/codex-schema-v1.json",
+  "type": "object",
+  "title": "The ArmyPlanner Open-Format Codex schema",
+  "description": "This schema comprises the codex JSON format from the ArmyPlanner Open Format.",
+  "definitions": {
+    "keyword-translation": {
+      "type": "object",
+      "title": "the keyword-translation schema",
+      "description": "describes how the unit object must be constructed",
+      "required": [
+        "keyword",
+        "translation"
+      ],
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "title": "the name of keyword",
+          "description": "contains the unique name of the keyword"
+        },
+        "translation": {
+          "type": "string",
+          "title": "the translation-value of the unit",
+          "description": "contains the translation value for the keyword - ready for translate engine"
+        }
+      }
+    },
+    "unit": {
+      "type": "object",
+      "title": "the unit schema",
+      "description": "describes how the unit object must be constructed",
+      "required": [
+        "id",
+        "name",
+        "unit-type",
+        "factions",
+        "weapons",
+        "characteristics"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "the id of the unit",
+          "description": "contains an unique id for the unit"
+        },
+        "name": {
+          "type": "string",
+          "title": "the name of the unit",
+          "description": "contains the name of the unit - ready for translate engine"
+        },
+        "unit-type": {
+          "type": "string",
+          "title": "the unit-type of the unit",
+          "description": "contains the unit-type of the unit - must be one of the values",
+          "examples": [
+            "hq",
+            "troops",
+            "elites",
+            "fast-attack",
+            "flyer",
+            "heavy-support",
+            "fortification",
+            "transport",
+            "lord-of-war"
+          ]
+        },
+        "power": {
+          "type": "number",
+          "title": "the power-value of the unit",
+          "description": "contains the power-value of the unit"
+        },
+        "points": {
+          "type": "number",
+          "title": "the point-value of the unit",
+          "description": "contains the point-value of the unit"
+        },
+        "factions": {
+          "type": "array",
+          "title": "the faction-list schema",
+          "description": "contains a list of display-values for the factions",
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "title": "the display-value of the faction",
+                "description": "contains a display-value for the faction - ready for translate engine"
+              }
+            ]
+          }
+        },
+        "weapons": {
+          "type": "array",
+          "title": "the weapon-list schema",
+          "description": "contains a list of keys of all weapons for the unit",
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "title": "the key of the weapon",
+                "description": "contains the key of the weapon"
+              }
+            ]
+          }
+        },
+        "characteristics": {
+          "type": "array",
+          "title": "the characteristics-list schema",
+          "description": "contains a list of characteristic-objects for the unit",
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "title": "the characteristics schema",
+                "description": "contains the characteristics-object for the unit",
+                "required": [
+                  "name",
+                  "move",
+                  "weapon-skill",
+                  "ballistic-skill",
+                  "strength",
+                  "toughness",
+                  "wounds",
+                  "attacks",
+                  "leadership",
+                  "save"
+                ],
+                "properties": {
+                  "countMin": {
+                    "type": "number",
+                    "title": "the countmin-entry of the characteristic-entry",
+                    "description": "describes how many models are contained in this characteristic"
+                  },
+                  "countMax": {
+                    "type": "number",
+                    "title": "the countmax-entry of the characteristic-entry",
+                    "description": "optional - if 2-5 models are included in this characteristic, this value must be set to 5."
+                  },
+                  "id": {
+                    "type": "string",
+                    "title": "the id-entry of the characteristic-entry",
+                    "description": "contains the unique id of the characteristics-entry"
+                  },
+                  "name": {
+                    "type": "string",
+                    "title": "the name-entry of the characteristic-entry",
+                    "description": "contains the name of the characteristics-entry (as specified in the Codex) - ready for translate engine"
+                  },
+                  "move": {
+                    "type": "string",
+                    "title": "the move-value of the characteristic-entry",
+                    "description": "contains the move-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "weapon-skill": {
+                    "type": "string",
+                    "title": "the weapon-skill-value of the characteristic-entry",
+                    "description": "contains the weapon-skill-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "ballistic-skill": {
+                    "type": "string",
+                    "title": "the ballistic-skill-value of the characteristic-entry",
+                    "description": "contains the ballistic-skill-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "strength": {
+                    "type": "string",
+                    "title": "the strength-value of the characteristic-entry",
+                    "description": "contains the strength-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "toughness": {
+                    "type": "string",
+                    "title": "the toughness-value of the characteristic-entry",
+                    "description": "contains the toughness-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "wounds": {
+                    "type": "string",
+                    "title": "the wounds-value of the characteristic-entry",
+                    "description": "contains the mowoundsve-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "attacks": {
+                    "type": "string",
+                    "title": "the attacks-value of the characteristic-entry",
+                    "description": "contains the attacks-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "leadership": {
+                    "type": "string",
+                    "title": "the leadership-value of the characteristic-entry",
+                    "description": "contains the leadership-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "save": {
+                    "type": "string",
+                    "title": "the save-value of the characteristic-entry",
+                    "description": "contains the save-value of the characteristic-entry (as specified in the Codex)"
+                  },
+                  "points": {
+                    "type": "number",
+                    "title": "the point-value of the unit",
+                    "description": "contains the point-value of the unit"
+                  }
+                },
+                "additionalProperties": true
+              }
+            ]
+          }
+        },
+        "options": {
+          "type": "array",
+          "title": "the options-list schema",
+          "description": "contains a list of options-objects for the unit",
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "title": "the option schema",
+                "description": "contains the option-object for the unit",
+                "required": [
+                  "description",
+                  "max-count"
+                ],
+                "properties": {
+                  "description": {
+                    "type": "string",
+                    "title": "the description of this option",
+                    "description": "contains the description of this option - ready for translate engine."
+                  },
+                  "target-unit": {
+                    "type": "string",
+                    "title": "the key of the target unit",
+                    "description": "if this option only applies to a specific unit or model, then the key must be specified here."
+                  },
+                  "target-equipment": {
+                    "type": "string",
+                    "title": "the key of the target equipment",
+                    "description": "if this option only applies to a specific equipment, then the key must be specified here."
+                  },
+                  "max-count": {
+                    "type": "number",
+                    "title": "the max-count-value of this option",
+                    "description": "specifies how often this option may be used for this unit or model. if -1 is specified, then this option can be used as often as desired.",
+                    "default": -1
+                  },
+                  "additional-power": {
+                    "type": "number",
+                    "title": "the additional power-value of this option",
+                    "description": "Specifies how much power is added by this option."
+                  },
+                  "actions": {
+                    "type": "array",
+                    "title": "the max-count-value of this option",
+                    "description": "specifies how often this option may be used for this unit or model. if -1 is specified, then this option can be used as often as desired.",
+                    "items": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "title": "the action schema",
+                          "description": "describes for the exact steps for the option for the app",
+                          "required": [
+                            "type"
+                          ],
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "title": "the description of this option",
+                              "description": "contains the description of this option - ready for translate engine",
+                              "examples": [
+                                "replace",
+                                "addtounit"
+                              ]
+                            },
+                            "source-unit": {
+                              "type": "string",
+                              "title": "the key of the source unit",
+                              "description": "the key of the unit to be replaced."
+                            },
+                            "source-equipment": {
+                              "type": "string",
+                              "title": "the key of the source equipment",
+                              "description": "the key of the equipment to be replaced."
+                            },
+                            "target-unit": {
+                              "type": "string",
+                              "title": "the key of the target unit",
+                              "description": "the key of the unit which will be inserted so."
+                            },
+                            "target-equipment": {
+                              "type": "string",
+                              "title": "the key of the target equipment",
+                              "description": "the key of the equipment which will be inserted so."
+                            },
+                            "max-count": {
+                              "type": "number",
+                              "title": "the max-count-value of this action",
+                              "description": "specifies how often this particular action may be used within the option."
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    "weapon": {
+      "type": "object",
+      "title": "the weapon schema",
+      "description": "describes how the weapon object must be constructed",
+      "required": [
+        "id",
+        "name",
+        "weapon-type",
+        "range",
+        "type",
+        "dices",
+        "strength",
+        "armour-penetration",
+        "damage",
+        "abilities",
+        "profiles"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "the id of the weapon",
+          "description": "contains an unique id for this weapon"
+        },
+        "is-profile": {
+          "type": "boolean",
+          "title": "the is-proile value of the weapon",
+          "description": "defines if this weapon entry is a profile"
+        },
+        "name": {
+          "type": "string",
+          "title": "the name of the weapon",
+          "description": "contains the name of the weapon - ready for translate engine"
+        },
+        "weapon-type": {
+          "type": "string",
+          "title": "the weapon-type of the weapon",
+          "description": "contains the weapon-type of the weapon",
+          "enum": [
+            "ranged",
+            "melee"
+          ]
+        },
+        "range": {
+          "type": "string",
+          "title": "the range value of the weapon",
+          "description": "contains the range value of the weapon (as specified in the codex) - ready for translate engine",
+          "examples": [
+            "18\"",
+            "24\"",
+            "72\"",
+            "{{weapon_type_melee}}"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "title": "the type value of the weapon",
+          "description": "contains the type value of the weapon (as specified in the codex) - ready for translate engine"
+        },
+        "dices": {
+          "type": "string",
+          "title": "the number of dices of the weapon",
+          "description": "contains the number of dices for the weapon - ready for translate engine",
+          "examples": [
+            "2",
+            "4",
+            "D3",
+            "D6",
+            "{{title_dices,6}}"
+          ]
+        },
+        "strength": {
+          "type": "string",
+          "title": "the strength value of the weapon",
+          "description": "contains the strength value of the weapon"
+        },
+        "armour-penetration": {
+          "type": "string",
+          "title": "the armour-penetration value of the weapon",
+          "description": "contains the armour-penetration value of the weapon"
+        },
+        "damage": {
+          "type": "string",
+          "title": "the damage value of the weapon",
+          "description": "contains the damage value of the weapon"
+        },
+        "abilities": {
+          "type": "array",
+          "title": "the abilities-list schema",
+          "description": "contains a list of display-values for the abilities of the weapon",
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "title": "the display-value of the ability",
+                "description": "contains a display-value for the ability - ready for translate engine"
+              }
+            ]
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "title": "the profiles-list schema",
+          "description": "contains a list of names with all profiles",
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "title": "the key of the profile",
+                "description": "contains the key of the profile-entry"
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "user-interface": {
+      "type": "object",
+      "title": "the keyword-translation schema",
+      "description": "describes how the unit object must be constructed",
+      "required": [
+        "element",
+        "items"
+      ],
+      "properties": {
+        "element": {
+          "type": "string",
+          "title": "the name of ui-element",
+          "enum": [
+            "unit-list",
+            "wargear-list",
+            "roster-detail-summary-header"
+          ],
+          "description": "to which ui element is this element directed"
+        },
+        "items": {
+          "type": "array",
+          "title": "the items-list schema",
+          "description": "contains a listing with the properties of the object to be displayed",
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "title": "the key of the property",
+                "description": "contains the key of the property to be displayed."
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "meta",
+    "languages",
+    "keywords",
+    "units",
+    "weapons",
+    "wargear",
+    "ui"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "title": "the codex-meta schema",
+      "description": "contains the code-meta informations",
+      "required": [
+        "created",
+        "game",
+        "codex"
+      ],
+      "properties": {
+        "created": {
+          "type": "string",
+          "title": "the timestamp of the last update",
+          "description": "contains the (utc-)timestamp of the last update of the codex-data (needed for update functionality)"
+        },
+        "based-codex": {
+          "type": "string",
+          "title": "the key of the parent codex",
+          "description": "if this codex is based on another codex, the key of the parent codex (meta->codex->key) must be specified here"
+        },
+        "game": {
+          "type": "object",
+          "title": "the game-meta schema",
+          "description": "contains the meta-informations of the game",
+          "required": [
+            "key",
+            "name"
+          ],
+          "properties": {
+            "key": {
+              "type": "string",
+              "title": "the unique key of the game",
+              "description": "contains the unique key of the game (must match the folder name in the repository)"
+            },
+            "name": {
+              "type": "string",
+              "title": "the name of the game",
+              "description": "contains the name of the game - ready for translate engine"
+            }
+          },
+          "additionalProperties": true
+        },
+        "codex": {
+          "type": "object",
+          "title": "the codex-meta schema",
+          "description": "contains the meta-informations of the codex",
+          "required": [
+            "key",
+            "name"
+          ],
+          "properties": {
+            "key": {
+              "type": "string",
+              "title": "the unique key of this codex",
+              "description": "contains the unique key of this codex"
+            },
+            "name": {
+              "type": "string",
+              "title": "the name of the codex",
+              "description": "contains the name of the codex - ready for translate engine"
+            },
+            "description": {
+              "type": "string",
+              "title": "an optional description for the codex",
+              "description": "contains a description of the codex - note: the description is given as markdown code"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "languages": {
+      "type": "array",
+      "title": "the languages-list schema",
+      "description": "contains a list of available languages of this codex",
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "title": "the codex-language schema",
+            "description": "describes how the codex language entry must be structured.",
+            "required": [
+              "name",
+              "path",
+              "lang"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "the display-value for the language",
+                "description": "contains an universal display value for the language"
+              },
+              "path": {
+                "type": "string",
+                "title": "the path to the language file",
+                "description": "contains the path to the codex-language json-file - must be in the same directory as the main codex file"
+              },
+              "lang": {
+                "type": "string",
+                "title": "the code for this language",
+                "description": "contains the ISO 639-1 code for this language (en for english, de for german, etc.)"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "title": "the list of keyword translations for this codex",
+      "description": "contains a list of all keyword-translations for the codex",
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/keyword-translation",
+            "additionalProperties": true
+          }
+        ],
+        "additionalProperties": true
+      }
+    },
+    "units": {
+      "type": "array",
+      "title": "the list of units for this codex",
+      "description": "contains a list with all units for the codex",
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/unit",
+            "additionalProperties": true
+          }
+        ],
+        "additionalProperties": true
+      }
+    },
+    "weapons": {
+      "type": "array",
+      "title": "the list of weapons for this codex",
+      "description": "contains a list with all weapons for the codex",
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/weapon",
+            "additionalProperties": true
+          }
+        ],
+        "additionalProperties": true
+      }
+    },
+    "wargear": {
+      "type": "array",
+      "title": "the wargear-list schema",
+      "description": "contains the list of wargear for this codex",
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "title": "the wargear schema",
+            "description": "describes how a wargear entry must be structured.",
+            "required": [
+              "id",
+              "name",
+              "effect"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "title": "the unique id of this wargear",
+                "description": "contains an unique id for the wargear"
+              },
+              "name": {
+                "type": "string",
+                "title": "the name of the wagear",
+                "description": "contains the name of the wargear - ready for translate engine"
+              },
+              "effect": {
+                "type": "string",
+                "title": "the effect content of this wargear",
+                "description": "contains the effect content to display of the wargear - ready for translate engine"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "ui": {
+      "type": "array",
+      "title": "a list of elements describing specific app ui parts",
+      "description": "contains various elements that describe the structure of certain app interface elements.",
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/user-interface",
+            "additionalProperties": true
+          }
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

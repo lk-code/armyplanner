@@ -1,0 +1,11 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/repository-schema-v1.json",
+    "games": [
+        {
+            "path": "/w40k"
+        },
+        {
+            "path": "/waos"
+        }
+    ]
+}
