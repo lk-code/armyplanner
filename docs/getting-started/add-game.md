@@ -31,5 +31,3 @@ To add your own game to the index do the following:
 `    "codices": [`<br />
 `    ]`<br />
 `}`
-
-Then proceed to the [Add new Codex](#add-new-codex) step.
