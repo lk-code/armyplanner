@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/codex-schema-v1.json",
+  "$id": "https://raw.githubusercontent.com/lk-code/armyplanner/main/codex-schema-v1.json",
   "type": "object",
   "title": "The ArmyPlanner Open-Format Codex schema",
   "description": "This schema comprises the codex JSON format from the ArmyPlanner Open Format.",

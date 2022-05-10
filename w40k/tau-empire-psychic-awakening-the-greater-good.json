@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/codex-schema-v1.json",
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner/main/codex-schema-v1.json",
     "meta": {
         "created": "2021-12-26 18:45:40",
         "based-codex": "tau-empire-2018",

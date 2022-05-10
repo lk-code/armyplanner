@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/repository-schema-v1.json",
+    "$id": "https://raw.githubusercontent.com/lk-code/armyplanner/main/repository-schema-v1.json",
     "type": "object",
     "title": "The ArmyPlanner Open-Format Repository schema",
     "description": "this schema comprises the repository JSON format from the ArmyPlanner Open Format.",

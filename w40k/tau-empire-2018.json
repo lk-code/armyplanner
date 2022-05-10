@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/codex-schema-v1.json",
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner/main/codex-schema-v1.json",
     "meta": {
         "created": "2021-12-27 18:45:40",
         "game": {

@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner-data/main/game-schema-v1.json",
+    "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner/main/game-schema-v1.json",
     "title": "Warhammer - Age of Sigmar",
     "description": "# Warhammer: Age of Sigmar\n\nmade by Games Workshop Ltd.",
     "codices": [
