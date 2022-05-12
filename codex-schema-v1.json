@@ -200,7 +200,7 @@
                     "description": "contains the point-value of the unit"
                   }
                 },
-                "additionalProperties": false
+                "additionalProperties": true
               }
             ]
           }
@@ -301,7 +301,7 @@
                     }
                   }
                 },
-                "additionalProperties": false
+                "additionalProperties": true
               }
             ]
           }
@@ -424,7 +424,7 @@
           }
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
     "user-interface": {
       "type": "object",
@@ -513,7 +513,7 @@
               "description": "contains the name of the game - ready for translate engine"
             }
           },
-          "additionalProperties": false
+          "additionalProperties": true
         },
         "codex": {
           "type": "object",
@@ -540,10 +540,10 @@
               "description": "contains a description of the codex - note: the description is given as markdown code"
             }
           },
-          "additionalProperties": false
+          "additionalProperties": true
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
     "languages": {
       "type": "array",
@@ -578,7 +578,7 @@
                 "description": "contains the ISO 639-1 code for this language (en for english, de for german, etc.)"
               }
             },
-            "additionalProperties": false
+            "additionalProperties": true
           }
         ]
       }
@@ -592,10 +592,10 @@
         "anyOf": [
           {
             "$ref": "#/definitions/keyword-translation",
-            "additionalProperties": false
+            "additionalProperties": true
           }
         ],
-        "additionalProperties": false
+        "additionalProperties": true
       }
     },
     "units": {
@@ -607,10 +607,10 @@
         "anyOf": [
           {
             "$ref": "#/definitions/unit",
-            "additionalProperties": false
+            "additionalProperties": true
           }
         ],
-        "additionalProperties": false
+        "additionalProperties": true
       }
     },
     "weapons": {
@@ -622,10 +622,10 @@
         "anyOf": [
           {
             "$ref": "#/definitions/weapon",
-            "additionalProperties": false
+            "additionalProperties": true
           }
         ],
-        "additionalProperties": false
+        "additionalProperties": true
       }
     },
     "wargear": {
@@ -661,7 +661,7 @@
                 "description": "contains the effect content to display of the wargear - ready for translate engine"
               }
             },
-            "additionalProperties": false
+            "additionalProperties": true
           }
         ]
       }
@@ -675,10 +675,10 @@
         "anyOf": [
           {
             "$ref": "#/definitions/user-interface",
-            "additionalProperties": false
+            "additionalProperties": true
           }
         ],
-        "additionalProperties": false
+        "additionalProperties": true
       }
     }
   },

@@ -64,7 +64,7 @@
                                 "description": "the (utc-)timestamp used for update functionality"
                             }
                         },
-                        "additionalProperties": false
+                        "additionalProperties": true
                     }
                 ]
             }

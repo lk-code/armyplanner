@@ -29,7 +29,7 @@
                                 "description": "specifies the path to the game directory where the index file is located - note: the path is specified without the index.json"
                             }
                         },
-                        "additionalProperties": false
+                        "additionalProperties": true
                     }
                 ]
             }
