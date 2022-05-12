@@ -682,5 +682,5 @@
       }
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

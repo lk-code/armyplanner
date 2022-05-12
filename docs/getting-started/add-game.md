@@ -12,7 +12,7 @@ Open the file index.json in the root directory. All available games are listed h
 `        }`<br />
 `        ....`<br />
 `        {`<br />
-`            "path": "/directory_to_your_own_game"`<br />
+`            "path": "/unique_key_of_your_game"`<br />
 `        }`<br />
 `    ]`<br />
 `}`
