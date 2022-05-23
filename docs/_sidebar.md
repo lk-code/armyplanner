@@ -5,5 +5,8 @@
   - [add a codex](getting-started/add-codex.md)
 
 - content
-  - [format](format.md)
-  - [changelog](changelog.md)
+  - [format](content/format.md)
+
+- project
+  - [roadmap](project/roadmap.md)
+  - [changelog](project/changelog.md)
