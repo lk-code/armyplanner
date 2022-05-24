@@ -489,7 +489,14 @@
           "description": "contains the (utc-)timestamp of the last update of the codex-data (needed for update functionality)"
         },
         "based-codex": {
-          "type": "string",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
           "title": "the key of the parent codex",
           "description": "if this codex is based on another codex, the key of the parent codex (meta->codex->key) must be specified here"
         },
