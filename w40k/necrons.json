@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "created": "2022-05-24T15:02:27.0983996Z",
+    "based-codex": null,
+    "game": {
+      "key": "w40k",
+      "name": "{{meta_game_name}}"
+    },
+    "codex": {
+      "key": "necrons",
+      "name": "{{meta_codex_name}}"
+    }
+  },
+  "languages": [],
+  "keywords": [],
+  "units": [],
+  "weapons": [],
+  "wargear": [],
+  "ui": [],
+  "$schema": "https://raw.githubusercontent.com/lk-code/armyplanner/main/codex-schema-v1.json"
+}
