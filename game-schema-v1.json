@@ -7,7 +7,8 @@
     "required": [
         "title",
         "description",
-        "codices"
+        "codices",
+        "ui"
     ],
     "properties": {
         "title": {
@@ -67,6 +68,21 @@
                         "additionalProperties": true
                     }
                 ]
+            }
+        },
+        "ui": {
+            "type": "array",
+            "title": "a list of elements describing specific app ui parts",
+            "description": "contains various elements that describe the structure of certain app interface elements.",
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/user-interface",
+                        "additionalProperties": true
+                    }
+                ],
+                "additionalProperties": true
             }
         }
     },
