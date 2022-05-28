@@ -4,6 +4,44 @@
     "type": "object",
     "title": "The ArmyPlanner Open-Format Game-Index schema",
     "description": "This schema comprises the game-index JSON format from the ArmyPlanner Open Format.",
+    "definitions": {
+        "user-interface": {
+            "type": "object",
+            "title": "the keyword-translation schema",
+            "description": "describes how the unit object must be constructed",
+            "required": [
+                "element",
+                "items"
+            ],
+            "properties": {
+                "element": {
+                    "type": "string",
+                    "title": "the name of ui-element",
+                    "enum": [
+                        "unit-list",
+                        "wargear-list",
+                        "roster-detail-summary-header"
+                    ],
+                    "description": "to which ui element is this element directed"
+                },
+                "items": {
+                    "type": "array",
+                    "title": "the items-list schema",
+                    "description": "contains a listing with the properties of the object to be displayed",
+                    "additionalItems": true,
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "title": "the key of the property",
+                                "description": "contains the key of the property to be displayed."
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
     "required": [
         "title",
         "description",
