@@ -7,9 +7,6 @@ Open the file index.json in the root directory. All available games are listed h
 `        {`<br />
 `            "path": "/w40k"`<br />
 `        },`<br />
-`        {`<br />
-`            "path": "/waos"`<br />
-`        }`<br />
 `        ....`<br />
 `        {`<br />
 `            "path": "/unique_key_of_your_game"`<br />
@@ -17,7 +14,7 @@ Open the file index.json in the root directory. All available games are listed h
 `    ]`<br />
 `}`
 
-Choose a directory key for the game. This key must be unique, that means it should not be used again in the whole ArmyPlanner repository. This will be used later in the individual codices for the assignment.<br />
+Choose a directory key for the game (Only characters `a-z`,`A-Z`,`0-9`). This key must be unique, that means it should not be used again in the whole ArmyPlanner repository. This will be used later in the individual codices for the assignment.<br />
 To add your own game to the index do the following:
 
 1. Add an object with the folder name of your own game at the end of the index list `games`.

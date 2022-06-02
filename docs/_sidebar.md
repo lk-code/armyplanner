@@ -6,6 +6,9 @@
 
 - content
   - [format](content/format.md)
+  - [repository index schema](content/repository-index-schema.md)
+  - [game index schema](content/game-index-schema.md)
+  - [codex schema](content/codex-schema.md)
 
 - project
   - [roadmap](project/roadmap.md)
