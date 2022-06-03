@@ -439,8 +439,8 @@
           "type": "string",
           "title": "the name of ui-element",
           "enum": [
-            "unit-list",
-            "wargear-list",
+            "codex-unit-list",
+            "codex-wargear-list",
             "roster-detail-summary-header"
           ],
           "description": "to which ui element is this element directed"
