@@ -328,11 +328,15 @@
             "element": "codex-unit-list",
             "items": [
                 {
-                    "header": "{{power}}",
+                    "header": "",
                     "property": "power"
                 },
                 {
-                    "header": "{{name}}",
+                    "header": "{{keyword_power}}",
+                    "property": "power"
+                },
+                {
+                    "header": "{{title_name}}",
                     "property": "name"
                 }
             ]
