@@ -17,8 +17,8 @@ Key | Description
 
 Key | Description
 -------- | --------
-`name` | displays the title of the wargear-item
-`effect` | displays the description of the wargear effect
+`wargear_name` | displays the name of the wargear-item
+`wargear_effect` | displays the description of the wargear effect
 
 ### roster-detail-summary-header
 

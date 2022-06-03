@@ -3082,17 +3082,40 @@
     ],
     "ui": [
         {
+            "element": "roster-detail-summary-header",
+            "items": [
+                {
+                    "property": "points"
+                },
+                {
+                    "property": "power"
+                }
+            ]
+        },
+        {
             "element": "codex-unit-list",
             "items": [
-                "power",
-                "name"
+                {
+                    "header": "{{power}}",
+                    "property": "power"
+                },
+                {
+                    "header": "{{name}}",
+                    "property": "name"
+                }
             ]
         },
         {
             "element": "codex-wargear-list",
             "items": [
-                "name",
-                "effect"
+                {
+                    "header": "{{title_system}}",
+                    "property": "wargear_name"
+                },
+                {
+                    "header": "{{title_effect}}",
+                    "property": "wargear_effect"
+                }
             ]
         }
     ]
