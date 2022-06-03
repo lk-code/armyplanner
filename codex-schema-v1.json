@@ -457,7 +457,6 @@
                 "title": "the characteristics schema",
                 "description": "contains the characteristics-object for the unit",
                 "required": [
-                  "header",
                   "property"
                 ],
                 "properties": {
