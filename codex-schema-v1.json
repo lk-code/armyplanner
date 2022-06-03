@@ -453,9 +453,26 @@
           "items": {
             "anyOf": [
               {
-                "type": "string",
-                "title": "the key of the property",
-                "description": "contains the key of the property to be displayed."
+                "type": "object",
+                "title": "the characteristics schema",
+                "description": "contains the characteristics-object for the unit",
+                "required": [
+                  "header",
+                  "property"
+                ],
+                "properties": {
+                  "header": {
+                    "type": "string",
+                    "title": "the header-key of the property",
+                    "description": "contains the key of the header-property to be displayed - ready for translation-engine"
+                  },
+                  "property": {
+                    "type": "string",
+                    "title": "the name of the property to be displayed",
+                    "description": "specifies from which properties the value should be displayed (read more in the documentation)."
+                  }
+                },
+                "additionalProperties": true
               }
             ]
           }
