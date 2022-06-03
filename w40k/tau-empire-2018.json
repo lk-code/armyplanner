@@ -3082,14 +3082,14 @@
     ],
     "ui": [
         {
-            "element": "unit-list",
+            "element": "codex-unit-list",
             "items": [
                 "power",
                 "name"
             ]
         },
         {
-            "element": "wargear-list",
+            "element": "codex-wargear-list",
             "items": [
                 "name",
                 "effect"
