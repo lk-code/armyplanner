@@ -110,7 +110,7 @@
         },
         {
             "keyword": "wargear",
-            "translation": "{{title_wargear}}"
+            "translation": "{{keyword_wargear}}"
         },
         {
             "keyword": "system",
@@ -135,10 +135,6 @@
         {
             "keyword": "units",
             "translation": "{{title_units}}"
-        },
-        {
-            "keyword": "wargear",
-            "translation": "{{title_wargear}}"
         },
         {
             "keyword": "hq",
