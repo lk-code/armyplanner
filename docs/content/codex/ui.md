@@ -8,6 +8,7 @@ The UI elements can be composed with the available properties.
 
 Key | Description
 -------- | --------
+`roll-symbol` | displays the power-count for the unit
 `power` | displays the power-count for the unit
 `name` | displays the unit title
 

@@ -3137,7 +3137,7 @@
             "items": [
                 {
                     "header": "",
-                    "property": "power"
+                    "property": "roll-symbol"
                 },
                 {
                     "header": "{{keyword_power}}",
