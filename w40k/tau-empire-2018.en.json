@@ -6,6 +6,8 @@
     "keyword_points": "pts",
     "keyword_battle_roll": "Roll",
     "keyword_wargear": "Wargear",
+    "keyword_system": "System",
+    "keyword_effect": "Effect",
 
     "title_weapon": "Weapon",
     "title_weapons": "Weapons",
@@ -28,8 +30,6 @@
     "title_weapons_melee": "Melee",
     "title_dices": "{1}D{0}",
     "title_melee_user": "User",
-    "title_system": "System",
-    "title_effect": "Effect",
     "title_power": "Power",
     "title_unit": "Unit",
     "title_units": "Units",

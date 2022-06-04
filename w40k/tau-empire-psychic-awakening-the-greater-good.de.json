@@ -6,6 +6,8 @@
     "keyword_points": "pkt",
     "keyword_battle_roll": "Rolle",
     "keyword_wargear": "Unterstützungssysteme",
+    "keyword_system": "System",
+    "keyword_effect": "Effekt",
 
     "title_weapon": "Waffe",
     "title_weapons": "Waffen",
@@ -28,8 +30,6 @@
     "title_weapons_melee": "Nahkampfwaffen",
     "title_dices": "{1}W{0}",
     "title_melee_user": "Träger",
-    "title_system": "System",
-    "title_effect": "Effekt",
     "title_power": "Macht",
     "title_unit": "Einheit",
     "title_units": "Einheiten",

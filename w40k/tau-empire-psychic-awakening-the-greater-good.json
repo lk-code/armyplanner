@@ -115,7 +115,7 @@
         },
         {
             "keyword": "system",
-            "translation": "{{title_system}}"
+            "translation": "{{keyword_system}}"
         },
         {
             "keyword": "effect",
@@ -341,11 +341,11 @@
             "element": "codex-wargear-list",
             "items": [
                 {
-                    "header": "{{title_system}}",
+                    "header": "{{keyword_system}}",
                     "property": "wargear_name"
                 },
                 {
-                    "header": "{{title_effect}}",
+                    "header": "{{keyword_effect}}",
                     "property": "wargear_effect"
                 }
             ]
