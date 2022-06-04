@@ -342,11 +342,11 @@
             "items": [
                 {
                     "header": "{{keyword_system}}",
-                    "property": "wargear_name"
+                    "property": "name"
                 },
                 {
                     "header": "{{keyword_effect}}",
-                    "property": "wargear_effect"
+                    "property": "effect"
                 }
             ]
         }
