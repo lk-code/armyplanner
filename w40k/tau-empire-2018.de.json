@@ -4,6 +4,7 @@
 
     "keyword_power": "MP",
     "keyword_points": "pkt",
+    "title_battle_roll": "Rolle",
 
     "title_weapon": "Waffe",
     "title_weapons": "Waffen",
@@ -29,7 +30,6 @@
     "title_wargear": "Unterstützungssysteme",
     "title_system": "System",
     "title_effect": "Effekt",
-    "title_battle_roll": "Rolle",
     "title_power": "Macht",
     "title_unit": "Einheit",
     "title_units": "Einheiten",

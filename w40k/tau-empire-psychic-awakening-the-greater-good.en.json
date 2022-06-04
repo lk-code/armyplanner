@@ -4,6 +4,7 @@
 
     "keyword_power": "CP",
     "keyword_points": "pts",
+    "keyword_battle_roll": "Roll",
 
     "title_weapon": "Weapon",
     "title_weapons": "Weapons",
@@ -29,7 +30,6 @@
     "title_wargear": "Wargear",
     "title_system": "System",
     "title_effect": "Effect",
-    "title_battle_roll": "Roll",
     "title_power": "Power",
     "title_unit": "Unit",
     "title_units": "Units",

@@ -3096,8 +3096,8 @@
             "element": "codex-unit-list",
             "items": [
                 {
-                    "header": "",
-                    "property": "power"
+                    "header": "{{keyword_battle_roll}}",
+                    "property": "roll-symbol"
                 },
                 {
                     "header": "{{keyword_power}}",

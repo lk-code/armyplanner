@@ -122,7 +122,7 @@
         },
         {
             "keyword": "battle-roll",
-            "translation": "{{title_battle_roll}}"
+            "translation": "{{keyword_battle_roll}}"
         },
         {
             "keyword": "power",
@@ -3136,7 +3136,7 @@
             "element": "codex-unit-list",
             "items": [
                 {
-                    "header": "",
+                    "header": "{{keyword_battle_roll}}",
                     "property": "roll-symbol"
                 },
                 {
