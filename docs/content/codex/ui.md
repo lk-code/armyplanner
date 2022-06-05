@@ -8,7 +8,7 @@ The UI elements can be composed with the available properties.
 
 Key | Description
 -------- | --------
-`roll-symbol` | displays the power-count for the unit (only available in ArmyPlanner App)
+`roll-symbol` | displays the power-count for the unit (only available in the official ArmyPlanner App)
 `power` | displays the power-count for the unit
 `name` | displays the unit title
 
