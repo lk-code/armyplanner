@@ -441,6 +441,7 @@
           "enum": [
             "codex-unit-list",
             "codex-wargear-list",
+            "codex-weapon-list",
             "roster-detail-summary-header"
           ],
           "description": "to which ui element is this element directed"
