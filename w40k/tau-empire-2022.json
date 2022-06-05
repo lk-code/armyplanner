@@ -66,7 +66,7 @@
         },
         {
             "keyword": "name",
-            "translation": "{{title_name}}"
+            "translation": "{{keyword_name}}"
         },
         {
             "keyword": "move",
@@ -3140,8 +3140,25 @@
                     "property": "power"
                 },
                 {
-                    "header": "{{title_name}}",
+                    "header": "{{keyword_name}}",
                     "property": "name"
+                }
+            ]
+        },
+        {
+            "element": "codex-weapon-list",
+            "items": [
+                {
+                    "header": "{{keyword_name}}",
+                    "property": "name"
+                },
+                {
+                    "header": "{{keyword_power}}",
+                    "property": "properties"
+                },
+                {
+                    "header": "{{title_abilities}}",
+                    "property": "abilities"
                 }
             ]
         },

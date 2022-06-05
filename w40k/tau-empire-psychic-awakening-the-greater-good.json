@@ -67,7 +67,7 @@
         },
         {
             "keyword": "name",
-            "translation": "{{title_name}}"
+            "translation": "{{keyword_name}}"
         },
         {
             "keyword": "move",
@@ -332,7 +332,7 @@
                     "property": "power"
                 },
                 {
-                    "header": "{{title_name}}",
+                    "header": "{{keyword_name}}",
                     "property": "name"
                 }
             ]
