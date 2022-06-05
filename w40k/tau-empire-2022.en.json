@@ -9,6 +9,7 @@
     "keyword_system": "System",
     "keyword_effect": "Effect",
     "keyword_name": "Name",
+    "keyword_abilities": "Abilities",
 
     "title_weapon": "Weapon",
     "title_weapons": "Weapons",
@@ -17,7 +18,6 @@
     "title_strength": "S",
     "title_armour_penetration": "AP",
     "title_damage": "D",
-    "title_abilities": "Abilities",
     "title_move": "M",
     "title_weapon_skill": "WS",
     "title_ballistic_skill": "BS",

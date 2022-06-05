@@ -62,7 +62,7 @@
         },
         {
             "keyword": "abilities",
-            "translation": "{{title_abilities}}"
+            "translation": "{{keyword_abilities}}"
         },
         {
             "keyword": "name",
@@ -3157,7 +3157,7 @@
                     "property": "properties"
                 },
                 {
-                    "header": "{{title_abilities}}",
+                    "header": "{{keyword_abilities}}",
                     "property": "abilities"
                 }
             ]

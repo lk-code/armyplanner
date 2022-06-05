@@ -63,7 +63,7 @@
         },
         {
             "keyword": "abilities",
-            "translation": "{{title_abilities}}"
+            "translation": "{{keyword_abilities}}"
         },
         {
             "keyword": "name",
@@ -334,6 +334,23 @@
                 {
                     "header": "{{keyword_name}}",
                     "property": "name"
+                }
+            ]
+        },
+        {
+            "element": "codex-weapon-list",
+            "items": [
+                {
+                    "header": "{{keyword_name}}",
+                    "property": "name"
+                },
+                {
+                    "header": "{{keyword_power}}",
+                    "property": "properties"
+                },
+                {
+                    "header": "{{keyword_abilities}}",
+                    "property": "abilities"
                 }
             ]
         },

@@ -3106,6 +3106,23 @@
             ]
         },
         {
+            "element": "codex-weapon-list",
+            "items": [
+                {
+                    "header": "{{keyword_name}}",
+                    "property": "name"
+                },
+                {
+                    "header": "{{keyword_power}}",
+                    "property": "properties"
+                },
+                {
+                    "header": "{{keyword_abilities}}",
+                    "property": "abilities"
+                }
+            ]
+        },
+        {
             "element": "codex-wargear-list",
             "items": [
                 {
