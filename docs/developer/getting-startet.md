@@ -17,7 +17,25 @@ You can develop your own app and use the ArmyPlanner data. There is a ready-made
 `IServiceCollection services = ....`<br />
 `services.AddArmyPlanner();`
 
-3. Now you can work with ArmyPlanner platform 😊
+3. ArmyPlanner services store data locally on a device storage. For this, a path must be specified by the developer. There is an internal app path (to store the repository data) and a public path for the user (to store the roster files)<br />
+`// set app paths`<br />
+`APP_DOCUMENTS_PATH = $"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}{Path.DirectorySeparatorChar}{DIRECTORY_APP_NAME}";`<br />
+`APP_LOCAL_PATH = FileSystem.Current.AppDataDirectory; // on .NET MAUI`<br />
+`APP_LOCAL_PATH = ApplicationData.Current.LocalFolder.Path; // on UWP`<br />
+` `<br />
+`// CodexService`<br />
+`ICodexService codexService = App.Services.GetService<ICodexService>();`<br />
+`codexService.SetBasePathForCodexData(APP_LOCAL_PATH);`<br />
+` `<br />
+`// RepositoryService`<br />
+`IRepositoryService repositoryService = App.Services.GetService<IRepositoryService>();`<br />
+`repositoryService.SetBasePathForData(APP_LOCAL_PATH);`<br />
+` `<br />
+`// RosterService`<br />
+`IRosterService rosterService = App.Services.GetService<IRosterService>();`<br />
+`rosterService.SetBasePathForRosterData(APP_DOCUMENTS_PATH);`<br />
+
+4. Now you can work with ArmyPlanner platform 😊
 
 ### ArmyPlanner Library Content
 
